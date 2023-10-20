@@ -1,0 +1,87 @@
+{
+    "aggs": [
+        {
+            "arg": {
+                "expr": "",
+                "type": "field",
+                "error": "",
+                "constantValue": "",
+                "selectedField": "Historical Create Date Quarter Offset"
+            },
+            "calc": "MIN",
+            "src_col": "Historical Create Date Quarter Offset",
+            "tgt_col": {
+                "id": "historical_create_date_quarter_offset",
+                "name": "Historical Create Date Quarter Offset",
+                "dataType": "integer"
+            }
+        },
+        {
+            "arg": {
+                "expr": "",
+                "type": "field",
+                "error": "",
+                "constantValue": "",
+                "selectedField": "Historical Create Date Month Offset"
+            },
+            "calc": "MIN",
+            "src_col": "Historical Create Date Month Offset",
+            "tgt_col": {
+                "id": "historical_create_date_month_offset",
+                "name": "Historical Create Date Month Offset",
+                "dataType": "integer"
+            }
+        },
+        {
+            "arg": {
+                "expr": "",
+                "type": "field",
+                "error": "",
+                "constantValue": "",
+                "selectedField": "Amount Change"
+            },
+            "calc": "SUM",
+            "src_col": "Amount Change",
+            "tgt_col": {
+                "id": "amount_change",
+                "name": "Amount Change",
+                "dataType": "number"
+            }
+        },
+        {
+            "arg": {
+                "expr": "",
+                "type": "field",
+                "error": "",
+                "constantValue": "",
+                "selectedField": "Previous Close Date Month Offset"
+            },
+            "calc": "MIN",
+            "src_col": "Previous Close Date Month Offset",
+            "tgt_col": {
+                "id": "previous_close_date_month_offset",
+                "name": "Previous Close Date Month Offset",
+                "dataType": "integer"
+            }
+        },
+        {
+            "arg": {
+                "expr": "",
+                "type": "field",
+                "error": "",
+                "constantValue": "",
+                "selectedField": "Previous Close Date Quarter Offset"
+            },
+            "calc": "MIN",
+            "src_col": "Previous Close Date Quarter Offset",
+            "tgt_col": {
+                "id": "previous_close_date_quarter_offset",
+                "name": "Previous Close Date Quarter Offset",
+                "dataType": "integer"
+            }
+        }
+    ],
+    "groupBy": [
+        "OpportunityId"
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "id": "rollup_kkkkry",
+    "name": "Time Series",
+    "type": "rollup",
+    "config": {
+        "aggs": [
+            {
+                "arg": {
+                    "expr": "",
+                    "type": "number",
+                    "error": "",
+                    "constantValue": "1",
+                    "selectedField": ""
+                },
+                "calc": "MIN",
+                "src_col": "1",
+                "tgt_col": {
+                    "id": "join_variable",
+                    "name": "Join Variable"
+                }
+            }
+        ],
+        "dateCol": "CreatedDate",
+        "groupBy": [],
+        "periodicity": "month"
+    },
+    "inlets": [
+        {
+            "id": "in_0",
+            "source": "adapter_0c47qy",
+            "sourceOutlet": "out_0"
+        }
+    ],
+    "outlets": [
+        {
+            "id": "out_0",
+            "targets": [
+                {
+                    "target": "edit_qexqkn",
+                    "targetInlet": "in_0"
+                }
+            ]
+        }
+    ]
+}

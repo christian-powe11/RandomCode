@@ -1,0 +1,694 @@
+{
+    "mode": "expression",
+    "action": "add_col",
+    "lookup": {
+        "type": "conditional",
+        "cases": [
+            {
+                "cond": {
+                    "left": {
+                        "type": "operation",
+                        "dataType": "integer",
+                        "operator": "length",
+                        "arguments": [
+                            {
+                                "type": "operation",
+                                "dataType": "string",
+                                "operator": "to_text",
+                                "arguments": [
+                                    {
+                                        "type": "field",
+                                        "fieldId": "zip5",
+                                        "dataType": "integer",
+                                        "fieldName": "ZIP5"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "type": "binary",
+                    "right": {
+                        "type": "constant",
+                        "value": 1,
+                        "dataType": "integer"
+                    },
+                    "dataType": "boolean",
+                    "operator": "eq"
+                },
+                "result": {
+                    "type": "operation",
+                    "operator": "concat",
+                    "arguments": [
+                        {
+                            "type": "constant",
+                            "value": "0000",
+                            "dataType": "string"
+                        },
+                        {
+                            "type": "operation",
+                            "dataType": "string",
+                            "operator": "to_text",
+                            "arguments": [
+                                {
+                                    "type": "field",
+                                    "fieldId": "zip5",
+                                    "dataType": "integer",
+                                    "fieldName": "ZIP5"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "cond": {
+                    "left": {
+                        "type": "operation",
+                        "dataType": "integer",
+                        "operator": "length",
+                        "arguments": [
+                            {
+                                "type": "operation",
+                                "dataType": "string",
+                                "operator": "to_text",
+                                "arguments": [
+                                    {
+                                        "type": "field",
+                                        "fieldId": "zip5",
+                                        "dataType": "integer",
+                                        "fieldName": "ZIP5"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "type": "binary",
+                    "right": {
+                        "type": "constant",
+                        "value": 2,
+                        "dataType": "integer"
+                    },
+                    "dataType": "boolean",
+                    "operator": "eq"
+                },
+                "result": {
+                    "type": "operation",
+                    "operator": "concat",
+                    "arguments": [
+                        {
+                            "type": "constant",
+                            "value": "000",
+                            "dataType": "string"
+                        },
+                        {
+                            "type": "operation",
+                            "dataType": "string",
+                            "operator": "to_text",
+                            "arguments": [
+                                {
+                                    "type": "field",
+                                    "fieldId": "zip5",
+                                    "dataType": "integer",
+                                    "fieldName": "ZIP5"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "cond": {
+                    "left": {
+                        "type": "operation",
+                        "dataType": "integer",
+                        "operator": "length",
+                        "arguments": [
+                            {
+                                "type": "operation",
+                                "dataType": "string",
+                                "operator": "to_text",
+                                "arguments": [
+                                    {
+                                        "type": "field",
+                                        "fieldId": "zip5",
+                                        "dataType": "integer",
+                                        "fieldName": "ZIP5"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "type": "binary",
+                    "right": {
+                        "type": "constant",
+                        "value": 3,
+                        "dataType": "integer"
+                    },
+                    "dataType": "boolean",
+                    "operator": "eq"
+                },
+                "result": {
+                    "type": "operation",
+                    "operator": "concat",
+                    "arguments": [
+                        {
+                            "type": "constant",
+                            "value": "00",
+                            "dataType": "string"
+                        },
+                        {
+                            "type": "operation",
+                            "dataType": "string",
+                            "operator": "to_text",
+                            "arguments": [
+                                {
+                                    "type": "field",
+                                    "fieldId": "zip5",
+                                    "dataType": "integer",
+                                    "fieldName": "ZIP5"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "cond": {
+                    "left": {
+                        "type": "operation",
+                        "dataType": "integer",
+                        "operator": "length",
+                        "arguments": [
+                            {
+                                "type": "operation",
+                                "dataType": "string",
+                                "operator": "to_text",
+                                "arguments": [
+                                    {
+                                        "type": "field",
+                                        "fieldId": "zip5",
+                                        "dataType": "integer",
+                                        "fieldName": "ZIP5"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "type": "binary",
+                    "right": {
+                        "type": "constant",
+                        "value": 4,
+                        "dataType": "integer"
+                    },
+                    "dataType": "boolean",
+                    "operator": "eq"
+                },
+                "result": {
+                    "type": "operation",
+                    "operator": "concat",
+                    "arguments": [
+                        {
+                            "type": "constant",
+                            "value": "0",
+                            "dataType": "string"
+                        },
+                        {
+                            "type": "operation",
+                            "dataType": "string",
+                            "operator": "to_text",
+                            "arguments": [
+                                {
+                                    "type": "field",
+                                    "fieldId": "zip5",
+                                    "dataType": "integer",
+                                    "fieldName": "ZIP5"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "default": {
+            "type": "operation",
+            "dataType": "string",
+            "operator": "to_text",
+            "arguments": [
+                {
+                    "type": "field",
+                    "fieldId": "zip5",
+                    "dataType": "integer",
+                    "fieldName": "ZIP5"
+                }
+            ]
+        },
+        "dataType": "string"
+    },
+    "tgtCol": {
+        "id": "response_zip5",
+        "name": "response_zip5",
+        "dataType": "string"
+    },
+    "pipeline": {
+        "steps": [
+            {
+                "tgt_col": {
+                    "id": "__transient_tw9s0O4n__",
+                    "name": "__transient_tw9s0O4n__",
+                    "dataType": "string"
+                },
+                "src_cols": [
+                    "ZIP5"
+                ],
+                "transform": "to_text",
+                "parameters": {},
+                "transient_cols": []
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_vkSOdZV1__",
+                    "name": "__transient_vkSOdZV1__",
+                    "dataType": "integer"
+                },
+                "src_cols": [
+                    "__transient_tw9s0O4n__"
+                ],
+                "transform": "text_len",
+                "parameters": {},
+                "transient_cols": [
+                    "__transient_tw9s0O4n__"
+                ]
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_3cI6Heq8__",
+                    "name": "__transient_3cI6Heq8__",
+                    "dataType": "boolean"
+                },
+                "src_cols": [
+                    "__transient_vkSOdZV1__"
+                ],
+                "transform": "binary",
+                "parameters": {
+                    "rhs": 1,
+                    "operator": "eq"
+                },
+                "transient_cols": [
+                    "__transient_vkSOdZV1__"
+                ]
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_9vNnu2p0__",
+                    "name": "__transient_9vNnu2p0__",
+                    "dataType": "string"
+                },
+                "src_cols": [],
+                "transform": "constant",
+                "parameters": {
+                    "value": "0000"
+                }
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_ocTt9ww6__",
+                    "name": "__transient_ocTt9ww6__",
+                    "dataType": "string"
+                },
+                "src_cols": [
+                    "ZIP5"
+                ],
+                "transform": "to_text",
+                "parameters": {},
+                "transient_cols": []
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_lhkKrYyK__",
+                    "name": "__transient_lhkKrYyK__"
+                },
+                "src_cols": [
+                    "__transient_9vNnu2p0__",
+                    "__transient_ocTt9ww6__"
+                ],
+                "transform": "concat",
+                "parameters": {
+                    "parts": [
+                        "__src_col_IlxyIkkv__",
+                        "__src_col_IlxyIkkv__"
+                    ],
+                    "src_col_placeholder": "__src_col_IlxyIkkv__"
+                },
+                "transient_cols": [
+                    "__transient_9vNnu2p0__",
+                    "__transient_ocTt9ww6__"
+                ]
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_3F1ak6Il__",
+                    "name": "__transient_3F1ak6Il__",
+                    "dataType": "string"
+                },
+                "src_cols": [
+                    "ZIP5"
+                ],
+                "transform": "to_text",
+                "parameters": {},
+                "transient_cols": []
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_yXWbqOlB__",
+                    "name": "__transient_yXWbqOlB__",
+                    "dataType": "integer"
+                },
+                "src_cols": [
+                    "__transient_3F1ak6Il__"
+                ],
+                "transform": "text_len",
+                "parameters": {},
+                "transient_cols": [
+                    "__transient_3F1ak6Il__"
+                ]
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_3ryegN8x__",
+                    "name": "__transient_3ryegN8x__",
+                    "dataType": "boolean"
+                },
+                "src_cols": [
+                    "__transient_yXWbqOlB__"
+                ],
+                "transform": "binary",
+                "parameters": {
+                    "rhs": 2,
+                    "operator": "eq"
+                },
+                "transient_cols": [
+                    "__transient_yXWbqOlB__"
+                ]
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_ffjU1WB3__",
+                    "name": "__transient_ffjU1WB3__",
+                    "dataType": "string"
+                },
+                "src_cols": [],
+                "transform": "constant",
+                "parameters": {
+                    "value": "000"
+                }
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_RRc3lNCz__",
+                    "name": "__transient_RRc3lNCz__",
+                    "dataType": "string"
+                },
+                "src_cols": [
+                    "ZIP5"
+                ],
+                "transform": "to_text",
+                "parameters": {},
+                "transient_cols": []
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_Zr-LS340__",
+                    "name": "__transient_Zr-LS340__"
+                },
+                "src_cols": [
+                    "__transient_ffjU1WB3__",
+                    "__transient_RRc3lNCz__"
+                ],
+                "transform": "concat",
+                "parameters": {
+                    "parts": [
+                        "__src_col_BQ6OYCRI__",
+                        "__src_col_BQ6OYCRI__"
+                    ],
+                    "src_col_placeholder": "__src_col_BQ6OYCRI__"
+                },
+                "transient_cols": [
+                    "__transient_ffjU1WB3__",
+                    "__transient_RRc3lNCz__"
+                ]
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_GqI9dQbO__",
+                    "name": "__transient_GqI9dQbO__",
+                    "dataType": "string"
+                },
+                "src_cols": [
+                    "ZIP5"
+                ],
+                "transform": "to_text",
+                "parameters": {},
+                "transient_cols": []
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_nJ2HJuRD__",
+                    "name": "__transient_nJ2HJuRD__",
+                    "dataType": "integer"
+                },
+                "src_cols": [
+                    "__transient_GqI9dQbO__"
+                ],
+                "transform": "text_len",
+                "parameters": {},
+                "transient_cols": [
+                    "__transient_GqI9dQbO__"
+                ]
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_EUcHbjpn__",
+                    "name": "__transient_EUcHbjpn__",
+                    "dataType": "boolean"
+                },
+                "src_cols": [
+                    "__transient_nJ2HJuRD__"
+                ],
+                "transform": "binary",
+                "parameters": {
+                    "rhs": 3,
+                    "operator": "eq"
+                },
+                "transient_cols": [
+                    "__transient_nJ2HJuRD__"
+                ]
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_3nJGmdeo__",
+                    "name": "__transient_3nJGmdeo__",
+                    "dataType": "string"
+                },
+                "src_cols": [],
+                "transform": "constant",
+                "parameters": {
+                    "value": "00"
+                }
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_ZNwKu1GL__",
+                    "name": "__transient_ZNwKu1GL__",
+                    "dataType": "string"
+                },
+                "src_cols": [
+                    "ZIP5"
+                ],
+                "transform": "to_text",
+                "parameters": {},
+                "transient_cols": []
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_JIMGZZiG__",
+                    "name": "__transient_JIMGZZiG__"
+                },
+                "src_cols": [
+                    "__transient_3nJGmdeo__",
+                    "__transient_ZNwKu1GL__"
+                ],
+                "transform": "concat",
+                "parameters": {
+                    "parts": [
+                        "__src_col_pZI4UkE___",
+                        "__src_col_pZI4UkE___"
+                    ],
+                    "src_col_placeholder": "__src_col_pZI4UkE___"
+                },
+                "transient_cols": [
+                    "__transient_3nJGmdeo__",
+                    "__transient_ZNwKu1GL__"
+                ]
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_8eDWdcy___",
+                    "name": "__transient_8eDWdcy___",
+                    "dataType": "string"
+                },
+                "src_cols": [
+                    "ZIP5"
+                ],
+                "transform": "to_text",
+                "parameters": {},
+                "transient_cols": []
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_r2AVcLAI__",
+                    "name": "__transient_r2AVcLAI__",
+                    "dataType": "integer"
+                },
+                "src_cols": [
+                    "__transient_8eDWdcy___"
+                ],
+                "transform": "text_len",
+                "parameters": {},
+                "transient_cols": [
+                    "__transient_8eDWdcy___"
+                ]
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_QvDE6e44__",
+                    "name": "__transient_QvDE6e44__",
+                    "dataType": "boolean"
+                },
+                "src_cols": [
+                    "__transient_r2AVcLAI__"
+                ],
+                "transform": "binary",
+                "parameters": {
+                    "rhs": 4,
+                    "operator": "eq"
+                },
+                "transient_cols": [
+                    "__transient_r2AVcLAI__"
+                ]
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_0WwB0OMR__",
+                    "name": "__transient_0WwB0OMR__",
+                    "dataType": "string"
+                },
+                "src_cols": [],
+                "transform": "constant",
+                "parameters": {
+                    "value": "0"
+                }
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_BkxJ8-2h__",
+                    "name": "__transient_BkxJ8-2h__",
+                    "dataType": "string"
+                },
+                "src_cols": [
+                    "ZIP5"
+                ],
+                "transform": "to_text",
+                "parameters": {},
+                "transient_cols": []
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_rPfiHvC___",
+                    "name": "__transient_rPfiHvC___"
+                },
+                "src_cols": [
+                    "__transient_0WwB0OMR__",
+                    "__transient_BkxJ8-2h__"
+                ],
+                "transform": "concat",
+                "parameters": {
+                    "parts": [
+                        "__src_col_9HOMBC3d__",
+                        "__src_col_9HOMBC3d__"
+                    ],
+                    "src_col_placeholder": "__src_col_9HOMBC3d__"
+                },
+                "transient_cols": [
+                    "__transient_0WwB0OMR__",
+                    "__transient_BkxJ8-2h__"
+                ]
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_0zESU6Kv__",
+                    "name": "__transient_0zESU6Kv__",
+                    "dataType": "string"
+                },
+                "src_cols": [
+                    "ZIP5"
+                ],
+                "transform": "to_text",
+                "parameters": {},
+                "transient_cols": []
+            },
+            {
+                "tgt_col": {
+                    "id": "response_zip5",
+                    "name": "response_zip5",
+                    "dataType": "string"
+                },
+                "src_cols": [
+                    "__transient_3cI6Heq8__",
+                    "__transient_lhkKrYyK__",
+                    "__transient_3ryegN8x__",
+                    "__transient_Zr-LS340__",
+                    "__transient_EUcHbjpn__",
+                    "__transient_JIMGZZiG__",
+                    "__transient_QvDE6e44__",
+                    "__transient_rPfiHvC___",
+                    "__transient_0zESU6Kv__"
+                ],
+                "transform": "case",
+                "parameters": {
+                    "else": "__src_col_VAJH1F9o__",
+                    "cases": [
+                        {
+                            "then": "__src_col_VAJH1F9o__",
+                            "when": "__src_col_VAJH1F9o__"
+                        },
+                        {
+                            "then": "__src_col_VAJH1F9o__",
+                            "when": "__src_col_VAJH1F9o__"
+                        },
+                        {
+                            "then": "__src_col_VAJH1F9o__",
+                            "when": "__src_col_VAJH1F9o__"
+                        },
+                        {
+                            "then": "__src_col_VAJH1F9o__",
+                            "when": "__src_col_VAJH1F9o__"
+                        }
+                    ],
+                    "src_col_placeholder": "__src_col_VAJH1F9o__"
+                },
+                "transient_cols": [
+                    "__transient_3cI6Heq8__",
+                    "__transient_lhkKrYyK__",
+                    "__transient_3ryegN8x__",
+                    "__transient_Zr-LS340__",
+                    "__transient_EUcHbjpn__",
+                    "__transient_JIMGZZiG__",
+                    "__transient_QvDE6e44__",
+                    "__transient_rPfiHvC___",
+                    "__transient_0zESU6Kv__"
+                ]
+            }
+        ]
+    },
+    "expression": "case \n  when LENGTH(TO_TEXT(`ZIP5`)) = 1 then CONCAT('0000',TO_TEXT(`ZIP5`))\n  when LENGTH(TO_TEXT(`ZIP5`)) = 2 then CONCAT('000',TO_TEXT(`ZIP5`))\n  when LENGTH(TO_TEXT(`ZIP5`)) = 3 then CONCAT('00',TO_TEXT(`ZIP5`))\n  when LENGTH(TO_TEXT(`ZIP5`)) = 4 then CONCAT('0',TO_TEXT(`ZIP5`))\n  else TO_TEXT(`ZIP5`) \nend"
+}

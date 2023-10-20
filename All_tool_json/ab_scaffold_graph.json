@@ -1,0 +1,90 @@
+[
+    {
+        "id": "edit_w9r3yc",
+        "name": "Transform",
+        "type": "edit",
+        "config": {
+            "edits": [],
+            "modify": {},
+            "hiddenFields": []
+        },
+        "inlets": [
+            {
+                "id": "in_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "filter_cdjkue",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "position": {
+            "x": -471.1531372070313,
+            "y": -81.5
+        }
+    },
+    {
+        "id": "filter_cdjkue",
+        "name": "Filter",
+        "type": "filter",
+        "config": {
+            "mode": "wizard",
+            "rules": [],
+            "dedupe": false,
+            "filter": [],
+            "joiner": "and",
+            "dataFilterExpr": "",
+            "dataFilterLookUp": {}
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "edit_w9r3yc",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "summarize_wubc1d",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "position": {
+            "x": -279.15313720703125,
+            "y": -81.5
+        }
+    },
+    {
+        "id": "summarize_wubc1d",
+        "name": "Summarize",
+        "type": "summarize",
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "filter_cdjkue",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": []
+            }
+        ],
+        "position": {
+            "x": -87.15313720703125,
+            "y": -81.5
+        }
+    }
+]

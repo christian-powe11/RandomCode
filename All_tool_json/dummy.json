@@ -1,0 +1,156 @@
+[
+    {
+        "id": "Filter2",
+        "name": "Filter",
+        "type": "filter",
+        "config": {
+            "mode": "wizard",
+            "rules": [],
+            "dedupe": false,
+            "filter": [],
+            "joiner": "and",
+            "dataFilterExpr": "",
+            "dataFilterLookUp": {}
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "Transform1",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "Transform3",
+                        "targetInlet": "in_0"
+                    },
+                    {
+                        "target": "Filter4",
+                        "targetInlet": "in_0"
+                    },
+                    {
+                        "target": "Summarize5",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "position": {
+            "x": -320.0,
+            "y": 16.0
+        }
+    },
+    {
+        "id": "Transform1",
+        "name": "Transform",
+        "type": "edit",
+        "config": {
+            "edits": [],
+            "modify": {},
+            "hiddenFields": []
+        },
+        "inlets": [
+            {
+                "id": "in_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "Filter2",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "position": {
+            "x": 34.0,
+            "y": 16.0
+        }
+    },
+    {
+        "id": "Transform3",
+        "name": "Transform",
+        "type": "edit",
+        "config": {
+            "edits": [],
+            "modify": {},
+            "hiddenFields": []
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "Filter2",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": []
+            }
+        ],
+        "position": {
+            "x": 34.0,
+            "y": 16.0
+        }
+    },
+    {
+        "id": "Filter4",
+        "name": "Filter",
+        "type": "filter",
+        "config": {
+            "mode": "wizard",
+            "rules": [],
+            "dedupe": false,
+            "filter": [],
+            "joiner": "and",
+            "dataFilterExpr": "",
+            "dataFilterLookUp": {}
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "Filter2",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": []
+            }
+        ],
+        "position": {
+            "x": -320.0,
+            "y": 16.0
+        }
+    },
+    {
+        "id": "Summarize5",
+        "name": "Summarize",
+        "type": "summarize",
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "Filter2",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": []
+            }
+        ],
+        "position": {
+            "x": 0.0,
+            "y": 45.0
+        }
+    }
+]

@@ -1,0 +1,193 @@
+{
+    "edits": [
+        {
+            "mode": "expression",
+            "action": "add_col",
+            "lookup": {
+                "type": "conditional",
+                "cases": [
+                    {
+                        "cond": {
+                            "type": "logical",
+                            "children": [
+                                {
+                                    "left": {
+                                        "type": "field",
+                                        "fieldId": "demo_complete_count",
+                                        "dataType": "integer",
+                                        "fieldName": "demo_complete_count"
+                                    },
+                                    "type": "binary",
+                                    "right": {
+                                        "type": "constant",
+                                        "value": 30,
+                                        "dataType": "integer"
+                                    },
+                                    "dataType": "boolean",
+                                    "operator": "gte"
+                                },
+                                {
+                                    "left": {
+                                        "left": {
+                                            "type": "field",
+                                            "fieldId": "demo_complete_count",
+                                            "dataType": "integer",
+                                            "fieldName": "demo_complete_count"
+                                        },
+                                        "type": "arithmetic",
+                                        "right": {
+                                            "type": "field",
+                                            "fieldId": "demo_booked_count",
+                                            "dataType": "integer",
+                                            "fieldName": "demo_booked_count"
+                                        },
+                                        "dataType": "number",
+                                        "operator": "div"
+                                    },
+                                    "type": "binary",
+                                    "right": {
+                                        "type": "constant",
+                                        "value": 0.6,
+                                        "dataType": "number"
+                                    },
+                                    "dataType": "boolean",
+                                    "operator": "gte"
+                                }
+                            ],
+                            "dataType": "boolean",
+                            "operator": "and"
+                        },
+                        "result": {
+                            "type": "constant",
+                            "value": 500,
+                            "dataType": "integer"
+                        }
+                    }
+                ],
+                "default": {
+                    "type": "constant",
+                    "value": 0,
+                    "dataType": "integer"
+                },
+                "dataType": "integer"
+            },
+            "tgtCol": {
+                "id": "monthly_spiff_amount",
+                "name": "monthly_spiff_amount",
+                "dataType": "integer"
+            },
+            "pipeline": {
+                "steps": [
+                    {
+                        "tgt_col": {
+                            "id": "__transient_KM5uJVwe__",
+                            "name": "__transient_KM5uJVwe__",
+                            "dataType": "boolean"
+                        },
+                        "src_cols": [
+                            "demo_complete_count"
+                        ],
+                        "transform": "binary",
+                        "parameters": {
+                            "rhs": 30,
+                            "operator": "gte"
+                        },
+                        "transient_cols": []
+                    },
+                    {
+                        "tgt_col": {
+                            "id": "__transient_ZMgcK3_T__",
+                            "name": "__transient_ZMgcK3_T__",
+                            "dataType": "number"
+                        },
+                        "src_cols": [
+                            "demo_complete_count",
+                            "demo_booked_count"
+                        ],
+                        "transform": "arithmetic",
+                        "parameters": {
+                            "operator": "div"
+                        },
+                        "transient_cols": []
+                    },
+                    {
+                        "tgt_col": {
+                            "id": "__transient_okjFqAIQ__",
+                            "name": "__transient_okjFqAIQ__",
+                            "dataType": "boolean"
+                        },
+                        "src_cols": [
+                            "__transient_ZMgcK3_T__"
+                        ],
+                        "transform": "binary",
+                        "parameters": {
+                            "rhs": 0.6,
+                            "operator": "gte"
+                        },
+                        "transient_cols": [
+                            "__transient_ZMgcK3_T__"
+                        ]
+                    },
+                    {
+                        "tgt_col": {
+                            "id": "__transient_eJpdskCN__",
+                            "name": "__transient_eJpdskCN__",
+                            "dataType": "boolean"
+                        },
+                        "src_cols": [
+                            "__transient_KM5uJVwe__",
+                            "__transient_okjFqAIQ__"
+                        ],
+                        "transform": "logical",
+                        "parameters": {
+                            "operator": "and",
+                            "extra_args": []
+                        },
+                        "transient_cols": [
+                            "__transient_KM5uJVwe__",
+                            "__transient_okjFqAIQ__"
+                        ]
+                    },
+                    {
+                        "tgt_col": {
+                            "id": "monthly_spiff_amount",
+                            "name": "monthly_spiff_amount",
+                            "dataType": "integer"
+                        },
+                        "src_cols": [
+                            "__transient_eJpdskCN__"
+                        ],
+                        "transform": "case",
+                        "parameters": {
+                            "else": 0,
+                            "cases": [
+                                {
+                                    "then": 500,
+                                    "when": "__src_col_lzeQ8mIW__"
+                                }
+                            ],
+                            "src_col_placeholder": "__src_col_lzeQ8mIW__"
+                        },
+                        "transient_cols": [
+                            "__transient_eJpdskCN__"
+                        ]
+                    }
+                ]
+            },
+            "expression": "CASE WHEN `demo_complete_count` >= 30 AND (`demo_complete_count` / `demo_booked_count`) >= 0.6 THEN 500 ELSE 0 END",
+            "expressionError": "Cannot find a field named demo_booked_count in the schema.\nIf you are trying to reference a calculated field, ensure that field is above the field you are currently editing in \u201cCalculated fields\u201d section of the Edit settings."
+        }
+    ],
+    "renames": {},
+    "hiddenFields": [
+        "demo_complete_count"
+    ],
+    "orderedFields": [
+        "reporting_month",
+        "name",
+        "email",
+        "demo_booked_count",
+        "demo_complete_count",
+        "monthly_spiff_amount"
+    ]
+}

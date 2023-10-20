@@ -1,0 +1,311 @@
+{
+    "edits": [
+        {
+            "mode": "expression",
+            "action": "add_col",
+            "lookup": {
+                "type": "operation",
+                "operator": "time_period",
+                "arguments": [
+                    {
+                        "type": "operation",
+                        "dataType": "date",
+                        "operator": "to_date",
+                        "arguments": [
+                            {
+                                "type": "field",
+                                "fieldId": "period_name",
+                                "dataType": "string",
+                                "fieldName": "Period Name"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "constant",
+                        "value": "month",
+                        "dataType": "string"
+                    }
+                ]
+            },
+            "tgtCol": {
+                "id": "report_month",
+                "name": "Report Month"
+            },
+            "pipeline": {
+                "steps": [
+                    {
+                        "tgt_col": {
+                            "id": "__transient_b3n4jtIW__",
+                            "name": "__transient_b3n4jtIW__",
+                            "dataType": "date"
+                        },
+                        "src_cols": [
+                            "Period Name"
+                        ],
+                        "transform": "to_date",
+                        "parameters": {},
+                        "transient_cols": []
+                    },
+                    {
+                        "tgt_col": {
+                            "id": "report_month",
+                            "name": "Report Month"
+                        },
+                        "src_cols": [
+                            "__transient_b3n4jtIW__"
+                        ],
+                        "transform": "time_period",
+                        "parameters": {
+                            "period": "MONTH"
+                        },
+                        "transient_cols": [
+                            "__transient_b3n4jtIW__"
+                        ]
+                    }
+                ]
+            },
+            "expression": "TIME_PERIOD(TO_DATE(`Period Name`),'month')"
+        },
+        {
+            "mode": "expression",
+            "action": "add_col",
+            "lookup": {
+                "type": "operation",
+                "operator": "time_period",
+                "arguments": [
+                    {
+                        "type": "operation",
+                        "dataType": "date",
+                        "operator": "to_date",
+                        "arguments": [
+                            {
+                                "type": "field",
+                                "fieldId": "period_name",
+                                "dataType": "string",
+                                "fieldName": "Period Name"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "constant",
+                        "value": "quarter",
+                        "dataType": "string"
+                    }
+                ]
+            },
+            "tgtCol": {
+                "id": "report_quarter",
+                "name": "Report Quarter"
+            },
+            "pipeline": {
+                "steps": [
+                    {
+                        "tgt_col": {
+                            "id": "__transient_fZKVBLYu__",
+                            "name": "__transient_fZKVBLYu__",
+                            "dataType": "date"
+                        },
+                        "src_cols": [
+                            "Period Name"
+                        ],
+                        "transform": "to_date",
+                        "parameters": {},
+                        "transient_cols": []
+                    },
+                    {
+                        "tgt_col": {
+                            "id": "report_quarter",
+                            "name": "Report Quarter"
+                        },
+                        "src_cols": [
+                            "__transient_fZKVBLYu__"
+                        ],
+                        "transform": "time_period",
+                        "parameters": {
+                            "period": "QUARTER"
+                        },
+                        "transient_cols": [
+                            "__transient_fZKVBLYu__"
+                        ]
+                    }
+                ]
+            },
+            "expression": "TIME_PERIOD(TO_DATE(`Period Name`),'quarter')"
+        },
+        {
+            "mode": "expression",
+            "action": "add_col",
+            "lookup": {
+                "type": "operation",
+                "dataType": "integer",
+                "operator": "time_period_offset",
+                "arguments": [
+                    {
+                        "type": "operation",
+                        "dataType": "date",
+                        "operator": "to_date",
+                        "arguments": [
+                            {
+                                "type": "field",
+                                "fieldId": "period_name",
+                                "dataType": "string",
+                                "fieldName": "Period Name"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "constant",
+                        "value": "quarter",
+                        "dataType": "string"
+                    }
+                ]
+            },
+            "tgtCol": {
+                "id": "report_quarter_offset",
+                "name": "Report Quarter Offset",
+                "dataType": "integer"
+            },
+            "pipeline": {
+                "steps": [
+                    {
+                        "tgt_col": {
+                            "id": "__transient_xQnP7KCi__",
+                            "name": "__transient_xQnP7KCi__",
+                            "dataType": "date"
+                        },
+                        "src_cols": [
+                            "Period Name"
+                        ],
+                        "transform": "to_date",
+                        "parameters": {},
+                        "transient_cols": []
+                    },
+                    {
+                        "tgt_col": {
+                            "id": "report_quarter_offset",
+                            "name": "Report Quarter Offset",
+                            "dataType": "integer"
+                        },
+                        "src_cols": [
+                            "__transient_xQnP7KCi__"
+                        ],
+                        "transform": "time_period_offset",
+                        "parameters": {
+                            "period": "QUARTER"
+                        },
+                        "transient_cols": [
+                            "__transient_xQnP7KCi__"
+                        ]
+                    }
+                ]
+            },
+            "expression": "TIME_PERIOD_OFFSET(TO_DATE(`Period Name`),'quarter')"
+        },
+        {
+            "mode": "expression",
+            "action": "add_col",
+            "lookup": {
+                "left": {
+                    "type": "field",
+                    "fieldId": "report_quarter_offset",
+                    "dataType": "integer",
+                    "fieldName": "Report Quarter Offset"
+                },
+                "type": "arithmetic",
+                "right": {
+                    "type": "constant",
+                    "value": 2,
+                    "dataType": "integer"
+                },
+                "dataType": "integer",
+                "operator": "add"
+            },
+            "tgtCol": {
+                "id": "c_\u2699\ufe0f_report_future_quarter",
+                "name": "\u2699\ufe0f Report Future Quarter",
+                "dataType": "integer"
+            },
+            "pipeline": {
+                "steps": [
+                    {
+                        "tgt_col": {
+                            "id": "c_\u2699\ufe0f_report_future_quarter",
+                            "name": "\u2699\ufe0f Report Future Quarter",
+                            "dataType": "integer"
+                        },
+                        "src_cols": [
+                            "Report Quarter Offset"
+                        ],
+                        "transform": "arithmetic",
+                        "parameters": {
+                            "rhs": 2,
+                            "operator": "add"
+                        },
+                        "transient_cols": []
+                    }
+                ]
+            },
+            "expression": "#The 2 changes the data to show opportunities within the next two quarters. If there is interest to only see the data for 1 quarter out, please change the two to one. If you only consider current pipeline to be the current quarter, remove the addition.#\n\n`Report Quarter Offset` + 2"
+        },
+        {
+            "mode": "expression",
+            "action": "add_col",
+            "lookup": {
+                "left": {
+                    "type": "field",
+                    "fieldId": "report_quarter_offset",
+                    "dataType": "integer",
+                    "fieldName": "Report Quarter Offset"
+                },
+                "type": "arithmetic",
+                "right": {
+                    "type": "constant",
+                    "value": 1,
+                    "dataType": "integer"
+                },
+                "dataType": "integer",
+                "operator": "sub"
+            },
+            "tgtCol": {
+                "id": "report_previous_quarter",
+                "name": "Report Previous Quarter",
+                "dataType": "integer"
+            },
+            "pipeline": {
+                "steps": [
+                    {
+                        "tgt_col": {
+                            "id": "report_previous_quarter",
+                            "name": "Report Previous Quarter",
+                            "dataType": "integer"
+                        },
+                        "src_cols": [
+                            "Report Quarter Offset"
+                        ],
+                        "transform": "arithmetic",
+                        "parameters": {
+                            "rhs": 1,
+                            "operator": "sub"
+                        },
+                        "transient_cols": []
+                    }
+                ]
+            },
+            "expression": "#The negative one limits the lookback to the quarter prior to the quarter of interest.#\n\n`Report Quarter Offset` - 1"
+        }
+    ],
+    "renames": {
+        "Period Offset": "Report Month Offset"
+    },
+    "hiddenFields": [],
+    "orderedFields": [
+        "\u2699\ufe0f Report Future Quarter",
+        "Report Month",
+        "Report Quarter",
+        "Report Quarter Offset",
+        "Report Previous Quarter",
+        "Period Name",
+        "Report Month Offset",
+        "Dummy Join"
+    ]
+}

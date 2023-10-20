@@ -1,0 +1,540 @@
+[
+    {
+        "id": "edit_mtlel1",
+        "name": "Transform",
+        "type": "edit",
+        "config": {
+            "edits": [],
+            "modify": {},
+            "hiddenFields": [],
+            "orderedFields": [
+                "Feature",
+                "Feature Importance"
+            ]
+        },
+        "inlets": [
+            {
+                "id": "in_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "stack_i9uev3",
+                        "targetInlet": "in_1"
+                    }
+                ]
+            }
+        ],
+        "description": "Assign the value \"2018\" to the field \"Year\" with a size of 1073741823 and a type of V_WString."
+    },
+    {
+        "id": "edit_ro1mdp",
+        "name": "Transform",
+        "type": "edit",
+        "config": {
+            "edits": [],
+            "modify": {},
+            "hiddenFields": [],
+            "orderedFields": [
+                "Feature",
+                "Feature Importance"
+            ]
+        },
+        "inlets": [
+            {
+                "id": "in_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "stack_zmovxk",
+                        "targetInlet": "in_1"
+                    }
+                ]
+            }
+        ],
+        "description": "Assign the value \"2019\" to the field \"Year\" with a size of 1073741823 and a type of V_WString."
+    },
+    {
+        "id": "edit_c4e70k",
+        "name": "Transform",
+        "type": "edit",
+        "config": {
+            "edits": [],
+            "modify": {},
+            "hiddenFields": [],
+            "orderedFields": [
+                "Feature",
+                "Feature Importance"
+            ]
+        },
+        "inlets": [
+            {
+                "id": "in_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "stack_i6ewrr",
+                        "targetInlet": "in_1"
+                    }
+                ]
+            }
+        ],
+        "description": "Assign the value \"2020\" to the field \"Year\" with a size of 1073741823 and a type of V_WString."
+    },
+    {
+        "id": "stack_i9uev3",
+        "name": "Stack",
+        "type": "stack",
+        "config": {
+            "dedupe": false,
+            "mapping": {
+                "Feature": "Feature",
+                "Feature Importance": "Feature Importance"
+            },
+            "renameLeft": {},
+            "renameRight": {},
+            "deselectLeft": [],
+            "deselectRight": [],
+            "fieldsFromLeft": [],
+            "fieldsFromRight": []
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "edit_7jtkkl",
+                "sourceOutlet": "out_0"
+            },
+            {
+                "id": "in_1",
+                "source": "edit_mtlel1",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "stack_zmovxk",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": "Combine data by matching field names, giving a warning for errors, including all matching fields, without setting a specific output order."
+    },
+    {
+        "id": "stack_zmovxk",
+        "name": "Stack",
+        "type": "stack",
+        "config": {
+            "dedupe": false,
+            "mapping": {
+                "Feature": "Feature",
+                "Feature Importance": "Feature Importance"
+            },
+            "renameLeft": {},
+            "renameRight": {},
+            "deselectLeft": [],
+            "deselectRight": [],
+            "fieldsFromLeft": [],
+            "fieldsFromRight": []
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "stack_i9uev3",
+                "sourceOutlet": "out_0"
+            },
+            {
+                "id": "in_1",
+                "source": "edit_ro1mdp",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "stack_i6ewrr",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": "Combine data by matching field names, giving a warning for errors, including all matching fields, without setting a specific output order."
+    },
+    {
+        "id": "stack_i6ewrr",
+        "name": "Stack",
+        "type": "stack",
+        "config": {
+            "dedupe": false,
+            "mapping": {
+                "Feature": "Feature",
+                "Feature Importance": "Feature Importance"
+            },
+            "renameLeft": {},
+            "renameRight": {},
+            "deselectLeft": [],
+            "deselectRight": [],
+            "fieldsFromLeft": [],
+            "fieldsFromRight": []
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "stack_zmovxk",
+                "sourceOutlet": "out_0"
+            },
+            {
+                "id": "in_1",
+                "source": "edit_c4e70k",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "stack_3chauv",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": "Combine data by matching field names, giving a warning for errors, including all matching fields, without setting a specific output order."
+    },
+    {
+        "id": "stack_3chauv",
+        "name": "Stack",
+        "type": "stack",
+        "config": {
+            "dedupe": false,
+            "mapping": {
+                "Feature": "Feature",
+                "Feature Importance": "Feature Importance"
+            },
+            "renameLeft": {},
+            "renameRight": {},
+            "deselectLeft": [],
+            "deselectRight": [],
+            "fieldsFromLeft": [],
+            "fieldsFromRight": []
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "stack_i6ewrr",
+                "sourceOutlet": "out_0"
+            },
+            {
+                "id": "in_1",
+                "source": "edit_aumzhz",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "summarize_jb03dq",
+                        "targetInlet": "in_0"
+                    },
+                    {
+                        "target": "join_tsl71y",
+                        "targetInlet": "in_1"
+                    }
+                ]
+            }
+        ],
+        "description": "Combine data by matching field names, giving a warning for errors, including all matching fields, without setting a specific output order."
+    },
+    {
+        "id": "summarize_jb03dq",
+        "name": "Summarize",
+        "type": "summarize",
+        "config": {
+            "aggs": [
+                {
+                    "arg": {
+                        "expr": "",
+                        "type": "field",
+                        "error": "",
+                        "constantValue": "",
+                        "selectedField": "Feature Importance"
+                    },
+                    "calc": "SUM",
+                    "tgt_col": {
+                        "id": "total_feature_importance",
+                        "name": "Total Feature Importance",
+                        "dataType": "integer"
+                    }
+                }
+            ],
+            "sorts": [],
+            "window": [
+                null,
+                null
+            ],
+            "groupBy": [],
+            "useWindow": false
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "stack_3chauv",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "join_tsl71y",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": "Group data by the \"Year\" field and sum the \"Feature Importance\" field, renaming it to \"Total Feature Importance.\""
+    },
+    {
+        "id": "edit_7kdfv3",
+        "name": "Transform",
+        "type": "edit",
+        "config": {
+            "edits": [],
+            "modify": {},
+            "hiddenFields": [],
+            "orderedFields": [
+                "Year",
+                "Total Feature Importance",
+                "Feature",
+                "Feature Importance"
+            ]
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "join_tsl71y",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "edit_6wvjdu",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": "Calculate the \"Scaling Factor\" as the reciprocal of \"Total Feature Importance,\" and then multiply it by \"Feature Importance,\" both as double type with size 8."
+    },
+    {
+        "id": "edit_6wvjdu",
+        "name": "Transform",
+        "type": "edit",
+        "config": {
+            "edits": [],
+            "modify": {},
+            "hiddenFields": [],
+            "orderedFields": [
+                "Total Feature Importance",
+                "Feature"
+            ]
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "edit_7kdfv3",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "edit_bxkhcb",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": "Deselect the fields \"Total Feature Importance\" and \"Scaling Factor,\" while selecting all unknown fields, without changing the order or using comma decimals."
+    },
+    {
+        "id": "edit_bxkhcb",
+        "name": "Transform",
+        "type": "edit",
+        "config": {
+            "edits": [],
+            "modify": {},
+            "hiddenFields": [],
+            "orderedFields": [
+                "Year",
+                "Feature",
+                "Feature Importance"
+            ]
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "edit_6wvjdu",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "edit_i77rha",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": "Create an \"Int32\" field named \"Feature Importance Rank\" of size 4, incrementing it by 1 from the previous row, grouped by the \"Year\" field, without updating existing fields."
+    },
+    {
+        "id": "edit_i77rha",
+        "name": "Transform",
+        "type": "edit",
+        "config": {
+            "edits": [],
+            "modify": {},
+            "hiddenFields": [],
+            "orderedFields": [
+                "Year",
+                "Feature",
+                "Feature Importance"
+            ]
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "edit_bxkhcb",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": []
+            }
+        ],
+        "description": "Create an \"Int32\" field named \"RecordID\" with a size of 6, starting value of 1, and positioned at the beginning of the record."
+    },
+    {
+        "id": "edit_7jtkkl",
+        "name": "Transform",
+        "type": "edit",
+        "config": {
+            "edits": [],
+            "modify": {},
+            "hiddenFields": [],
+            "orderedFields": [
+                "Feature",
+                "Feature Importance"
+            ]
+        },
+        "inlets": [
+            {
+                "id": "in_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "stack_i9uev3",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": "Set the field \"Year\" to the value \"2017\" with a size of 1073741823 and a type of V_WString."
+    },
+    {
+        "id": "edit_aumzhz",
+        "name": "Transform",
+        "type": "edit",
+        "config": {
+            "edits": [],
+            "modify": {},
+            "hiddenFields": []
+        },
+        "inlets": [
+            {
+                "id": "in_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "stack_3chauv",
+                        "targetInlet": "in_1"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "join_tsl71y",
+        "name": "Join",
+        "type": "join",
+        "config": {
+            "on": [],
+            "joiner": "and",
+            "joinType": "left"
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "summarize_jb03dq",
+                "sourceOutlet": "out_0"
+            },
+            {
+                "id": "in_1",
+                "source": "stack_3chauv",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "edit_7kdfv3",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": "Join two datasets on the \"Year\" field, not by record position, selecting specific fields from the left and right connections, while changing the order and excluding right \"Year.\""
+
+    }
+]

@@ -1,0 +1,82 @@
+{
+    "id": "edit_xcgumh",
+    "name": "Transform",
+    "type": "edit",
+    "config": {
+        "edits": [
+            {
+                "mode": "expression",
+                "action": "add_col",
+                "lookup": {
+                    "type": "operation",
+                    "dataType": "string",
+                    "operator": "split_part",
+                    "arguments": [
+                        {
+                            "type": "field",
+                            "fieldId": "ip_address",
+                            "dataType": "string",
+                            "fieldName": "ip_address"
+                        },
+                        {
+                            "type": "constant",
+                            "value": ".",
+                            "dataType": "string"
+                        },
+                        {
+                            "type": "constant",
+                            "value": 1,
+                            "dataType": "integer"
+                        }
+                    ]
+                },
+                "tgtCol": {
+                    "id": "first_ip",
+                    "name": "First_IP",
+                    "dataType": "string"
+                },
+                "pipeline": {
+                    "steps": [
+                        {
+                            "tgt_col": {
+                                "id": "first_ip",
+                                "name": "First_IP",
+                                "dataType": "string"
+                            },
+                            "src_cols": [
+                                "ip_address"
+                            ],
+                            "transform": "split_part",
+                            "parameters": {
+                                "part": 1,
+                                "delimeter": "."
+                            },
+                            "transient_cols": []
+                        }
+                    ]
+                },
+                "expression": "SPLIT_PART(`ip_address`,\".\",1)"
+            }
+        ],
+        "modify": {},
+        "hiddenFields": [],
+        "orderedFields": []
+    },
+    "inlets": [
+        {
+            "id": "in_0",
+            "source": "filter_znktfe",
+            "sourceOutlet": "out_0"
+        }
+    ],
+    "outlets": [
+        {
+            "id": "out_0",
+            "targets": []
+        }
+    ],
+    "position": {
+        "x": 2,
+        "y": 2
+    }
+}

@@ -1,0 +1,314 @@
+{
+    "mode": "expression",
+    "action": "add_col",
+    "lookup": {
+        "left": {
+            "left": {
+                "left": {
+                    "type": "field",
+                    "fieldId": "starting_amount",
+                    "dataType": "number",
+                    "fieldName": "Starting Amount (ORIG)"
+                },
+                "type": "arithmetic",
+                "right": {
+                    "type": "operation",
+                    "dataType": "number",
+                    "operator": "coalesce",
+                    "arguments": [
+                        {
+                            "type": "field",
+                            "fieldId": "rolled_in_from_prior_quarter",
+                            "dataType": "number",
+                            "fieldName": "Rolled In From Prior Quarter"
+                        },
+                        {
+                            "type": "operation",
+                            "dataType": "number",
+                            "operator": "to_number",
+                            "arguments": [
+                                {
+                                    "type": "constant",
+                                    "value": 0,
+                                    "dataType": "integer"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "dataType": "number",
+                "operator": "sub"
+            },
+            "type": "arithmetic",
+            "right": {
+                "type": "operation",
+                "dataType": "number",
+                "operator": "coalesce",
+                "arguments": [
+                    {
+                        "type": "field",
+                        "fieldId": "amount_change",
+                        "dataType": "number",
+                        "fieldName": "Amount Change"
+                    },
+                    {
+                        "type": "operation",
+                        "dataType": "number",
+                        "operator": "to_number",
+                        "arguments": [
+                            {
+                                "type": "constant",
+                                "value": 0,
+                                "dataType": "integer"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "dataType": "number",
+            "operator": "sub"
+        },
+        "type": "arithmetic",
+        "right": {
+            "type": "operation",
+            "dataType": "number",
+            "operator": "coalesce",
+            "arguments": [
+                {
+                    "type": "field",
+                    "fieldId": "new",
+                    "dataType": "number",
+                    "fieldName": "New"
+                },
+                {
+                    "type": "operation",
+                    "dataType": "number",
+                    "operator": "to_number",
+                    "arguments": [
+                        {
+                            "type": "constant",
+                            "value": 0,
+                            "dataType": "integer"
+                        }
+                    ]
+                }
+            ]
+        },
+        "dataType": "number",
+        "operator": "sub"
+    },
+    "tgtCol": {
+        "id": "starting_amount_2",
+        "name": "Starting Amount",
+        "dataType": "number"
+    },
+    "pipeline": {
+        "steps": [
+            {
+                "tgt_col": {
+                    "id": "__transient_wFYCjD0E__",
+                    "name": "__transient_wFYCjD0E__",
+                    "dataType": "integer"
+                },
+                "src_cols": [],
+                "transform": "constant",
+                "parameters": {
+                    "value": 0
+                }
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_cFGAffVF__",
+                    "name": "__transient_cFGAffVF__",
+                    "dataType": "number"
+                },
+                "src_cols": [
+                    "__transient_wFYCjD0E__"
+                ],
+                "transform": "to_number",
+                "parameters": {},
+                "transient_cols": [
+                    "__transient_wFYCjD0E__"
+                ]
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_P4IbK10h__",
+                    "name": "__transient_P4IbK10h__",
+                    "dataType": "number"
+                },
+                "src_cols": [
+                    "Rolled In From Prior Quarter",
+                    "__transient_cFGAffVF__"
+                ],
+                "transform": "coalesce",
+                "parameters": {
+                    "parts": [
+                        "__src_col_N-NWUROi__",
+                        "__src_col_N-NWUROi__"
+                    ],
+                    "src_col_placeholder": "__src_col_N-NWUROi__"
+                },
+                "transient_cols": [
+                    "__transient_cFGAffVF__"
+                ]
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_nGuk7rN1__",
+                    "name": "__transient_nGuk7rN1__",
+                    "dataType": "number"
+                },
+                "src_cols": [
+                    "Starting Amount (ORIG)",
+                    "__transient_P4IbK10h__"
+                ],
+                "transform": "arithmetic",
+                "parameters": {
+                    "operator": "sub"
+                },
+                "transient_cols": [
+                    "__transient_P4IbK10h__"
+                ]
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_9bzfNhQ-__",
+                    "name": "__transient_9bzfNhQ-__",
+                    "dataType": "integer"
+                },
+                "src_cols": [],
+                "transform": "constant",
+                "parameters": {
+                    "value": 0
+                }
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_1zS8EHN3__",
+                    "name": "__transient_1zS8EHN3__",
+                    "dataType": "number"
+                },
+                "src_cols": [
+                    "__transient_9bzfNhQ-__"
+                ],
+                "transform": "to_number",
+                "parameters": {},
+                "transient_cols": [
+                    "__transient_9bzfNhQ-__"
+                ]
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_da1OA6m4__",
+                    "name": "__transient_da1OA6m4__",
+                    "dataType": "number"
+                },
+                "src_cols": [
+                    "Amount Change",
+                    "__transient_1zS8EHN3__"
+                ],
+                "transform": "coalesce",
+                "parameters": {
+                    "parts": [
+                        "__src_col_6kGZD2H6__",
+                        "__src_col_6kGZD2H6__"
+                    ],
+                    "src_col_placeholder": "__src_col_6kGZD2H6__"
+                },
+                "transient_cols": [
+                    "__transient_1zS8EHN3__"
+                ]
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_MW_lk6YG__",
+                    "name": "__transient_MW_lk6YG__",
+                    "dataType": "number"
+                },
+                "src_cols": [
+                    "__transient_nGuk7rN1__",
+                    "__transient_da1OA6m4__"
+                ],
+                "transform": "arithmetic",
+                "parameters": {
+                    "operator": "sub"
+                },
+                "transient_cols": [
+                    "__transient_nGuk7rN1__",
+                    "__transient_da1OA6m4__"
+                ]
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_TuuZyP2G__",
+                    "name": "__transient_TuuZyP2G__",
+                    "dataType": "integer"
+                },
+                "src_cols": [],
+                "transform": "constant",
+                "parameters": {
+                    "value": 0
+                }
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_xkrTPGtd__",
+                    "name": "__transient_xkrTPGtd__",
+                    "dataType": "number"
+                },
+                "src_cols": [
+                    "__transient_TuuZyP2G__"
+                ],
+                "transform": "to_number",
+                "parameters": {},
+                "transient_cols": [
+                    "__transient_TuuZyP2G__"
+                ]
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_uZzGXKj8__",
+                    "name": "__transient_uZzGXKj8__",
+                    "dataType": "number"
+                },
+                "src_cols": [
+                    "New",
+                    "__transient_xkrTPGtd__"
+                ],
+                "transform": "coalesce",
+                "parameters": {
+                    "parts": [
+                        "__src_col_vBZhmEwh__",
+                        "__src_col_vBZhmEwh__"
+                    ],
+                    "src_col_placeholder": "__src_col_vBZhmEwh__"
+                },
+                "transient_cols": [
+                    "__transient_xkrTPGtd__"
+                ]
+            },
+            {
+                "tgt_col": {
+                    "id": "starting_amount_2",
+                    "name": "Starting Amount",
+                    "dataType": "number"
+                },
+                "src_cols": [
+                    "__transient_MW_lk6YG__",
+                    "__transient_uZzGXKj8__"
+                ],
+                "transform": "arithmetic",
+                "parameters": {
+                    "operator": "sub"
+                },
+                "transient_cols": [
+                    "__transient_MW_lk6YG__",
+                    "__transient_uZzGXKj8__"
+                ]
+            }
+        ]
+    },
+    "expression": "`Starting Amount (Orig)` - COALESCE(`Rolled in from Prior Quarter`,TO_NUMBER(0))\n\n- COALESCE(`Amount Change`,TO_NUMBER(0))\n- COALESCE (`New`,TO_NUMBER(0))",
+    "expressionError": "Cannot find a field named Amount Change in the schema.\nIf you are trying to reference a calculated field, ensure that field is above the field you are currently editing in \u201cCalculated fields\u201d section of the Edit settings."
+}

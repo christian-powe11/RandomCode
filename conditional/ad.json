@@ -1,0 +1,104 @@
+{
+    "mode": "expression",
+    "action": "add_col",
+    "lookup": {
+        "left": {
+            "left": {
+                "left": {
+                    "type": "field",
+                    "fieldId": "reporting_minus_2",
+                    "dataType": "number",
+                    "fieldName": "reporting_minus_2"
+                },
+                "type": "arithmetic",
+                "right": {
+                    "type": "field",
+                    "fieldId": "reporting_minus_1",
+                    "dataType": "number",
+                    "fieldName": "reporting_minus_1"
+                },
+                "dataType": "number",
+                "operator": "add"
+            },
+            "type": "arithmetic",
+            "right": {
+                "type": "field",
+                "fieldId": "reporting_month_1_gmv_projected",
+                "dataType": "number",
+                "fieldName": "reporting_month_1_gmv_projected"
+            },
+            "dataType": "number",
+            "operator": "add"
+        },
+        "type": "arithmetic",
+        "right": {
+            "type": "constant",
+            "value": 3,
+            "dataType": "integer"
+        },
+        "dataType": "number",
+        "operator": "div"
+    },
+    "tgtCol": {
+        "id": "reporting_month_2_gmv_projected",
+        "name": "reporting_month_2_gmv_projected",
+        "dataType": "number"
+    },
+    "pipeline": {
+        "steps": [
+            {
+                "tgt_col": {
+                    "id": "__transient_1h2Q3Ecz__",
+                    "name": "__transient_1h2Q3Ecz__",
+                    "dataType": "number"
+                },
+                "src_cols": [
+                    "reporting_minus_2",
+                    "reporting_minus_1"
+                ],
+                "transform": "arithmetic",
+                "parameters": {
+                    "operator": "add"
+                },
+                "transient_cols": []
+            },
+            {
+                "tgt_col": {
+                    "id": "__transient_Bdm20Any__",
+                    "name": "__transient_Bdm20Any__",
+                    "dataType": "number"
+                },
+                "src_cols": [
+                    "__transient_1h2Q3Ecz__",
+                    "reporting_month_1_gmv_projected"
+                ],
+                "transform": "arithmetic",
+                "parameters": {
+                    "operator": "add"
+                },
+                "transient_cols": [
+                    "__transient_1h2Q3Ecz__"
+                ]
+            },
+            {
+                "tgt_col": {
+                    "id": "reporting_month_2_gmv_projected",
+                    "name": "reporting_month_2_gmv_projected",
+                    "dataType": "number"
+                },
+                "src_cols": [
+                    "__transient_Bdm20Any__"
+                ],
+                "transform": "arithmetic",
+                "parameters": {
+                    "rhs": 3,
+                    "operator": "div"
+                },
+                "transient_cols": [
+                    "__transient_Bdm20Any__"
+                ]
+            }
+        ]
+    },
+    "expression": "(reporting_minus_2 + reporting_minus_1 + reporting_month_1_gmv_projected)/3"
+}

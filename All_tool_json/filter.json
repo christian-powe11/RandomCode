@@ -1,0 +1,31 @@
+[
+    {
+        "id": "filter_q5yqz8",
+        "name": "Filter",
+        "type": "filter",
+        "config": {
+            "mode": "wizard",
+            "rules": [],
+            "dedupe": false,
+            "filter": [],
+            "joiner": "and",
+            "dataFilterExpr": "",
+            "dataFilterLookUp": {}
+        },
+        "inlets": [
+            {
+                "id": "in_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": []
+            }
+        ],
+        "position": {
+            "x": -320.0,
+            "y": 16.0
+        }
+    }
+]

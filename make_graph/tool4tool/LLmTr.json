@@ -1,0 +1,70 @@
+{
+    "id": "",
+    "name": "Edit Transactions",
+    "type": "edit",
+    "description": "Scalar manipulation for Transactions",
+    "config": {
+        "edits": [
+            {
+                "action": "add_col",
+                "expression": "TransactionID, CustomerID, Date, Amount",
+                "lookup": {
+                    "arguments": [
+                        {
+                            "dataType": "integer",
+                            "fieldId": "TransactionID",
+                            "fieldName": "TransactionID",
+                            "type": "field"
+                        },
+                        {
+                            "dataType": "integer",
+                            "fieldId": "CustomerID",
+                            "fieldName": "CustomerID",
+                            "type": "field"
+                        },
+                        {
+                            "dataType": "date",
+                            "fieldId": "Date",
+                            "fieldName": "Date",
+                            "type": "field"
+                        },
+                        {
+                            "dataType": "number",
+                            "fieldId": "Amount",
+                            "fieldName": "Amount",
+                            "type": "field"
+                        }
+                    ],
+                    "operator": "select",
+                    "type": "operation"
+                },
+                "mode": "expression",
+                "tgtCol": {
+                    "dataType": "any",
+                    "name": "Edit CTE Output"
+                }
+            }
+        ],
+        "hiddenFields": [],
+        "orderedFields":[],
+        "renames": {}
+    },
+    "inlets": [
+        {
+            "id": "in_0",
+            "source": "Transactions",
+            "sourceOutlet": "out_0"
+        }
+    ],
+    "outlets": [
+        {
+            "id": "out_0",
+            "targets": [
+                {
+                    "target": "Grouped",
+                    "targetInlet": "in_0"
+                }
+            ]
+        }
+    ]
+}

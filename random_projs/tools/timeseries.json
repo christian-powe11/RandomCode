@@ -1,0 +1,144 @@
+{
+    "aggs": [
+        {
+            "arg": {
+                "expr": "",
+                "type": "number",
+                "error": "",
+                "constantValue": "1",
+                "selectedField": ""
+            },
+            "calc": "MAX",
+            "src_col": "1",
+            "tgt_col": {
+                "id": "starting_amount",
+                "name": "Starting Amount"
+            }
+        },
+        {
+            "arg": {
+                "expr": "",
+                "type": "number",
+                "error": "",
+                "constantValue": "1",
+                "selectedField": ""
+            },
+            "calc": "MAX",
+            "src_col": "1",
+            "tgt_col": {
+                "id": "rolled_in_from_prior_quarter",
+                "name": "Rolled in from Prior Quarter"
+            }
+        },
+        {
+            "arg": {
+                "expr": "",
+                "type": "number",
+                "error": "",
+                "constantValue": "1",
+                "selectedField": ""
+            },
+            "calc": "MAX",
+            "src_col": "1",
+            "tgt_col": {
+                "id": "closed_won",
+                "name": "Closed Won"
+            }
+        },
+        {
+            "arg": {
+                "expr": "",
+                "type": "number",
+                "error": "",
+                "constantValue": "1",
+                "selectedField": ""
+            },
+            "calc": "MAX",
+            "src_col": "1",
+            "tgt_col": {
+                "id": "closed_lost",
+                "name": "Closed Lost"
+            }
+        },
+        {
+            "arg": {
+                "expr": "",
+                "type": "number",
+                "error": "",
+                "constantValue": "1",
+                "selectedField": ""
+            },
+            "calc": "MAX",
+            "src_col": "1",
+            "tgt_col": {
+                "id": "pushed",
+                "name": "Pushed"
+            }
+        },
+        {
+            "arg": {
+                "expr": "",
+                "type": "number",
+                "error": "",
+                "constantValue": "1",
+                "selectedField": ""
+            },
+            "calc": "MAX",
+            "src_col": "1",
+            "tgt_col": {
+                "id": "new",
+                "name": "New"
+            }
+        },
+        {
+            "arg": {
+                "expr": "",
+                "type": "number",
+                "error": "",
+                "constantValue": "1",
+                "selectedField": ""
+            },
+            "calc": "MAX",
+            "src_col": "1",
+            "tgt_col": {
+                "id": "amount_change",
+                "name": "Amount Change"
+            }
+        },
+        {
+            "arg": {
+                "expr": "",
+                "type": "number",
+                "error": "",
+                "constantValue": "1",
+                "selectedField": ""
+            },
+            "calc": "MAX",
+            "src_col": "1",
+            "tgt_col": {
+                "id": "ending_amount",
+                "name": "Ending Amount"
+            }
+        },
+        {
+            "arg": {
+                "expr": "",
+                "type": "number",
+                "error": "",
+                "constantValue": "1",
+                "selectedField": ""
+            },
+            "calc": "MAX",
+            "src_col": "1",
+            "tgt_col": {
+                "id": "net_change",
+                "name": "Net Change"
+            }
+        }
+    ],
+    "dateCol": "CreatedDate",
+    "groupBy": [
+        "Attribute"
+    ],
+    "periodicity": "month"
+}

@@ -1,0 +1,30 @@
+{
+    "id": "Transform1",
+    "name": "Transform",
+    "type": "edit",
+    "config": {
+        "edits": [],
+        "modify": {},
+        "hiddenFields": []
+    },
+    "inlets": [
+        {
+            "id": "in_0"
+        }
+    ],
+    "outlets": [
+        {
+            "id": "out_0",
+            "targets": [
+                {
+                    "target": "Filter2",
+                    "targetInlet": "in_0"
+                }
+            ]
+        }
+    ],
+    "position": {
+        "x": 34.0,
+        "y": 16.0
+    }
+}

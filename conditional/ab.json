@@ -1,0 +1,46 @@
+{
+    "mode": "expression",
+    "action": "add_col",
+    "lookup": {
+        "left": {
+            "type": "field",
+            "fieldId": "report_quarter_offset",
+            "dataType": "integer",
+            "fieldName": "Report Quarter Offset"
+        },
+        "type": "arithmetic",
+        "right": {
+            "type": "constant",
+            "value": 2,
+            "dataType": "integer"
+        },
+        "dataType": "integer",
+        "operator": "add"
+    },
+    "tgtCol": {
+        "id": "c_\u2699\ufe0f_report_future_quarter",
+        "name": "\u2699\ufe0f Report Future Quarter",
+        "dataType": "integer"
+    },
+    "pipeline": {
+        "steps": [
+            {
+                "tgt_col": {
+                    "id": "c_\u2699\ufe0f_report_future_quarter",
+                    "name": "\u2699\ufe0f Report Future Quarter",
+                    "dataType": "integer"
+                },
+                "src_cols": [
+                    "Report Quarter Offset"
+                ],
+                "transform": "arithmetic",
+                "parameters": {
+                    "rhs": 2,
+                    "operator": "add"
+                },
+                "transient_cols": []
+            }
+        ]
+    },
+    "expression": "#The 2 changes the data to show opportunities within the next two quarters. If there is interest to only see the data for 1 quarter out, please change the two to one. If you only consider current pipeline to be the current quarter, remove the addition.#\n\n`Report Quarter Offset` + 2"
+}

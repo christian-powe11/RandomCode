@@ -1,0 +1,164 @@
+{
+    "edits": [
+        {
+            "mode": "expression",
+            "action": "add_col",
+            "lookup": {
+                "type": "conditional",
+                "cases": [
+                    {
+                        "cond": {
+                            "type": "operation",
+                            "dataType": "boolean",
+                            "operator": "in",
+                            "arguments": [
+                                {
+                                    "type": "field",
+                                    "fieldId": "stagename",
+                                    "dataType": "string",
+                                    "fieldName": "StageName (ORIG)"
+                                },
+                                {
+                                    "type": "constant",
+                                    "value": "Closed Won",
+                                    "dataType": "string"
+                                }
+                            ]
+                        },
+                        "result": {
+                            "type": "constant",
+                            "value": "Closed Won",
+                            "dataType": "string"
+                        }
+                    },
+                    {
+                        "cond": {
+                            "type": "operation",
+                            "dataType": "boolean",
+                            "operator": "in",
+                            "arguments": [
+                                {
+                                    "type": "field",
+                                    "fieldId": "stagename",
+                                    "dataType": "string",
+                                    "fieldName": "StageName (ORIG)"
+                                },
+                                {
+                                    "type": "constant",
+                                    "value": "Closed Lost",
+                                    "dataType": "string"
+                                }
+                            ]
+                        },
+                        "result": {
+                            "type": "constant",
+                            "value": "Closed Lost",
+                            "dataType": "string"
+                        }
+                    }
+                ],
+                "default": {
+                    "type": "field",
+                    "fieldId": "stagename",
+                    "dataType": "string",
+                    "fieldName": "StageName (ORIG)"
+                },
+                "dataType": "string"
+            },
+            "tgtCol": {
+                "id": "stagename_2",
+                "name": "StageName",
+                "dataType": "string"
+            },
+            "pipeline": {
+                "steps": [
+                    {
+                        "tgt_col": {
+                            "id": "__transient_NFyoGAUO__",
+                            "name": "__transient_NFyoGAUO__",
+                            "dataType": "boolean"
+                        },
+                        "src_cols": [
+                            "StageName (ORIG)"
+                        ],
+                        "transform": "in",
+                        "parameters": {
+                            "values": [
+                                "Closed Won"
+                            ],
+                            "src_col_placeholder": "__src_col_vg_za3wK__"
+                        },
+                        "transient_cols": []
+                    },
+                    {
+                        "tgt_col": {
+                            "id": "__transient_-MfKmyrB__",
+                            "name": "__transient_-MfKmyrB__",
+                            "dataType": "boolean"
+                        },
+                        "src_cols": [
+                            "StageName (ORIG)"
+                        ],
+                        "transform": "in",
+                        "parameters": {
+                            "values": [
+                                "Closed Lost"
+                            ],
+                            "src_col_placeholder": "__src_col_Bod8hrB4__"
+                        },
+                        "transient_cols": []
+                    },
+                    {
+                        "tgt_col": {
+                            "id": "stagename_2",
+                            "name": "StageName",
+                            "dataType": "string"
+                        },
+                        "src_cols": [
+                            "__transient_NFyoGAUO__",
+                            "__transient_-MfKmyrB__",
+                            "StageName (ORIG)"
+                        ],
+                        "transform": "case",
+                        "parameters": {
+                            "else": "__src_col_bkoU4Ryj__",
+                            "cases": [
+                                {
+                                    "then": "Closed Won",
+                                    "when": "__src_col_bkoU4Ryj__"
+                                },
+                                {
+                                    "then": "Closed Lost",
+                                    "when": "__src_col_bkoU4Ryj__"
+                                }
+                            ],
+                            "src_col_placeholder": "__src_col_bkoU4Ryj__"
+                        },
+                        "transient_cols": [
+                            "__transient_NFyoGAUO__",
+                            "__transient_-MfKmyrB__"
+                        ]
+                    }
+                ]
+            },
+            "expression": "#Standardize Stage Names for the analysis#\n\nCASE\n  WHEN\n    `StageName (ORIG)` in ('Closed Won')\n  THEN\n'Closed Won'\n  WHEN\n    `StageName (ORIG)` in ('Closed Lost')\n  THEN\n'Closed Lost'\nELSE\n`StageName (ORIG)`\nEND",
+            "expressionError": "Cannot find a field named StageName (ORIG) in the schema.\nIf you are trying to reference a calculated field, ensure that field is above the field you are currently editing in \u201cCalculated fields\u201d section of the Edit settings."
+        }
+    ],
+    "renames": {
+        "StageName": "StageName (ORIG)"
+    },
+    "hiddenFields": [
+        "StageName (ORIG)"
+    ],
+    "orderedFields": [
+        "StageName",
+        "Id",
+        "Name",
+        "StageName (ORIG)",
+        "Amount",
+        "CloseDate",
+        "Type",
+        "CreatedDate"
+    ]
+}

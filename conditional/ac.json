@@ -1,0 +1,46 @@
+{
+    "mode": "expression",
+    "action": "add_col",
+    "lookup": {
+        "left": {
+            "type": "field",
+            "fieldId": "report_quarter_offset",
+            "dataType": "integer",
+            "fieldName": "Report Quarter Offset"
+        },
+        "type": "arithmetic",
+        "right": {
+            "type": "constant",
+            "value": 1,
+            "dataType": "integer"
+        },
+        "dataType": "integer",
+        "operator": "sub"
+    },
+    "tgtCol": {
+        "id": "report_previous_quarter",
+        "name": "Report Previous Quarter",
+        "dataType": "integer"
+    },
+    "pipeline": {
+        "steps": [
+            {
+                "tgt_col": {
+                    "id": "report_previous_quarter",
+                    "name": "Report Previous Quarter",
+                    "dataType": "integer"
+                },
+                "src_cols": [
+                    "Report Quarter Offset"
+                ],
+                "transform": "arithmetic",
+                "parameters": {
+                    "rhs": 1,
+                    "operator": "sub"
+                },
+                "transient_cols": []
+            }
+        ]
+    },
+    "expression": "#The negative one limits the lookback to the quarter prior to the quarter of interest.#\n\n`Report Quarter Offset` - 1"
+}

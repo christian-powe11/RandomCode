@@ -1,0 +1,1234 @@
+[
+    {
+        "id": "edit_mtlel1",
+        "name": "Transform",
+        "type": "edit",
+        "config": {
+            "edits": [
+                {
+                    "mode": "expression",
+                    "action": "add_col",
+                    "lookup": {
+                        "type": "operation",
+                        "dataType": "string",
+                        "operator": "to_text",
+                        "arguments": [
+                            {
+                                "type": "constant",
+                                "value": 2018,
+                                "dataType": "integer"
+                            }
+                        ]
+                    },
+                    "tgtCol": {
+                        "id": "year",
+                        "name": "Year",
+                        "dataType": "string"
+                    },
+                    "pipeline": {
+                        "steps": [
+                            {
+                                "tgt_col": {
+                                    "id": "__transient_eRvFEQki__",
+                                    "name": "__transient_eRvFEQki__",
+                                    "dataType": "integer"
+                                },
+                                "src_cols": [],
+                                "transform": "constant",
+                                "parameters": {
+                                    "value": 2018
+                                }
+                            },
+                            {
+                                "tgt_col": {
+                                    "id": "year",
+                                    "name": "Year",
+                                    "dataType": "string"
+                                },
+                                "src_cols": [
+                                    "__transient_eRvFEQki__"
+                                ],
+                                "transform": "to_text",
+                                "parameters": {},
+                                "transient_cols": [
+                                    "__transient_eRvFEQki__"
+                                ]
+                            }
+                        ]
+                    },
+                    "expression": "TO_TEXT(2018)"
+                }
+            ],
+            "modify": {},
+            "hiddenFields": [],
+            "orderedFields": [
+                "Feature",
+                "Feature Importance",
+                "Year"
+            ]
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "source_g1s3dc",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "stack_i9uev3",
+                        "targetInlet": "in_1"
+                    }
+                ]
+            }
+        ],
+        "description": "Assign the value \"2018\" to the field \"Year\" with a size of 1073741823 and a type of V_WString."
+    },
+    {
+        "id": "edit_ro1mdp",
+        "name": "Transform",
+        "type": "edit",
+        "config": {
+            "edits": [
+                {
+                    "mode": "expression",
+                    "action": "add_col",
+                    "lookup": {
+                        "type": "operation",
+                        "dataType": "string",
+                        "operator": "to_text",
+                        "arguments": [
+                            {
+                                "type": "constant",
+                                "value": 2019,
+                                "dataType": "integer"
+                            }
+                        ]
+                    },
+                    "tgtCol": {
+                        "id": "year",
+                        "name": "Year",
+                        "dataType": "string"
+                    },
+                    "pipeline": {
+                        "steps": [
+                            {
+                                "tgt_col": {
+                                    "id": "__transient_E48iUog9__",
+                                    "name": "__transient_E48iUog9__",
+                                    "dataType": "integer"
+                                },
+                                "src_cols": [],
+                                "transform": "constant",
+                                "parameters": {
+                                    "value": 2019
+                                }
+                            },
+                            {
+                                "tgt_col": {
+                                    "id": "year",
+                                    "name": "Year",
+                                    "dataType": "string"
+                                },
+                                "src_cols": [
+                                    "__transient_E48iUog9__"
+                                ],
+                                "transform": "to_text",
+                                "parameters": {},
+                                "transient_cols": [
+                                    "__transient_E48iUog9__"
+                                ]
+                            }
+                        ]
+                    },
+                    "expression": "TO_TEXT(2019)"
+                }
+            ],
+            "modify": {},
+            "hiddenFields": [],
+            "orderedFields": [
+                "Feature",
+                "Feature Importance",
+                "Year"
+            ]
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "source_jirjt0",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "stack_zmovxk",
+                        "targetInlet": "in_1"
+                    }
+                ]
+            }
+        ],
+        "description": "Assign the value \"2019\" to the field \"Year\" with a size of 1073741823 and a type of V_WString."
+    },
+    {
+        "id": "edit_c4e70k",
+        "name": "Transform",
+        "type": "edit",
+        "config": {
+            "edits": [
+                {
+                    "mode": "expression",
+                    "action": "add_col",
+                    "lookup": {
+                        "type": "operation",
+                        "dataType": "string",
+                        "operator": "to_text",
+                        "arguments": [
+                            {
+                                "type": "constant",
+                                "value": 2020,
+                                "dataType": "integer"
+                            }
+                        ]
+                    },
+                    "tgtCol": {
+                        "id": "year",
+                        "name": "Year",
+                        "dataType": "string"
+                    },
+                    "pipeline": {
+                        "steps": [
+                            {
+                                "tgt_col": {
+                                    "id": "__transient_MeEICxlH__",
+                                    "name": "__transient_MeEICxlH__",
+                                    "dataType": "integer"
+                                },
+                                "src_cols": [],
+                                "transform": "constant",
+                                "parameters": {
+                                    "value": 2020
+                                }
+                            },
+                            {
+                                "tgt_col": {
+                                    "id": "year",
+                                    "name": "Year",
+                                    "dataType": "string"
+                                },
+                                "src_cols": [
+                                    "__transient_MeEICxlH__"
+                                ],
+                                "transform": "to_text",
+                                "parameters": {},
+                                "transient_cols": [
+                                    "__transient_MeEICxlH__"
+                                ]
+                            }
+                        ]
+                    },
+                    "expression": "TO_TEXT(2020)"
+                }
+            ],
+            "modify": {},
+            "hiddenFields": [],
+            "orderedFields": [
+                "Feature",
+                "Feature Importance",
+                "Year"
+            ]
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "source_akdlrb",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "stack_i6ewrr",
+                        "targetInlet": "in_1"
+                    }
+                ]
+            }
+        ],
+        "description": "Assign the value \"2020\" to the field \"Year\" with a size of 1073741823 and a type of V_WString."
+    },
+    {
+        "id": "edit_sdwgcw",
+        "name": "Transform",
+        "type": "edit",
+        "config": {
+            "edits": [
+                {
+                    "mode": "expression",
+                    "action": "add_col",
+                    "lookup": {
+                        "type": "operation",
+                        "dataType": "string",
+                        "operator": "to_text",
+                        "arguments": [
+                            {
+                                "type": "constant",
+                                "value": 2021,
+                                "dataType": "integer"
+                            }
+                        ]
+                    },
+                    "tgtCol": {
+                        "id": "year",
+                        "name": "Year",
+                        "dataType": "string"
+                    },
+                    "pipeline": {
+                        "steps": [
+                            {
+                                "tgt_col": {
+                                    "id": "__transient_bNLscyao__",
+                                    "name": "__transient_bNLscyao__",
+                                    "dataType": "integer"
+                                },
+                                "src_cols": [],
+                                "transform": "constant",
+                                "parameters": {
+                                    "value": 2021
+                                }
+                            },
+                            {
+                                "tgt_col": {
+                                    "id": "year",
+                                    "name": "Year",
+                                    "dataType": "string"
+                                },
+                                "src_cols": [
+                                    "__transient_bNLscyao__"
+                                ],
+                                "transform": "to_text",
+                                "parameters": {},
+                                "transient_cols": [
+                                    "__transient_bNLscyao__"
+                                ]
+                            }
+                        ]
+                    },
+                    "expression": "TO_TEXT(2021)"
+                }
+            ],
+            "modify": {},
+            "hiddenFields": [],
+            "orderedFields": [
+                "Feature",
+                "Feature Importance",
+                "Year"
+            ]
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "source_nrjdl4",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "stack_3chauv",
+                        "targetInlet": "in_1"
+                    }
+                ]
+            }
+        ],
+        "description": "Assign the value \"2021\" to the field \"Year\" with a size of 1073741823 and a type of V_WString."
+    },
+    {
+        "id": "stack_i9uev3",
+        "name": "Stack",
+        "type": "stack",
+        "config": {
+            "dedupe": false,
+            "mapping": {
+                "Year": "Year",
+                "Feature": "Feature",
+                "Feature Importance": "Feature Importance"
+            },
+            "renameLeft": {},
+            "renameRight": {},
+            "deselectLeft": [],
+            "deselectRight": [],
+            "fieldsFromLeft": [],
+            "fieldsFromRight": []
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "edit_7jtkkl",
+                "sourceOutlet": "out_0"
+            },
+            {
+                "id": "in_1",
+                "source": "edit_mtlel1",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "stack_zmovxk",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": "Combine data by matching field names, giving a warning for errors, including all matching fields, without setting a specific output order."
+    },
+    {
+        "id": "stack_zmovxk",
+        "name": "Stack",
+        "type": "stack",
+        "config": {
+            "dedupe": false,
+            "mapping": {
+                "Year": "Year",
+                "Feature": "Feature",
+                "Feature Importance": "Feature Importance"
+            },
+            "renameLeft": {},
+            "renameRight": {},
+            "deselectLeft": [],
+            "deselectRight": [],
+            "fieldsFromLeft": [],
+            "fieldsFromRight": []
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "stack_i9uev3",
+                "sourceOutlet": "out_0"
+            },
+            {
+                "id": "in_1",
+                "source": "edit_ro1mdp",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "stack_i6ewrr",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": "Combine data by matching field names, giving a warning for errors, including all matching fields, without setting a specific output order."
+    },
+    {
+        "id": "stack_i6ewrr",
+        "name": "Stack",
+        "type": "stack",
+        "config": {
+            "dedupe": false,
+            "mapping": {
+                "Year": "Year",
+                "Feature": "Feature",
+                "Feature Importance": "Feature Importance"
+            },
+            "renameLeft": {},
+            "renameRight": {},
+            "deselectLeft": [],
+            "deselectRight": [],
+            "fieldsFromLeft": [],
+            "fieldsFromRight": []
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "stack_zmovxk",
+                "sourceOutlet": "out_0"
+            },
+            {
+                "id": "in_1",
+                "source": "edit_c4e70k",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "stack_3chauv",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": "Combine data by matching field names, giving a warning for errors, including all matching fields, without setting a specific output order."
+    },
+    {
+        "id": "stack_3chauv",
+        "name": "Stack",
+        "type": "stack",
+        "config": {
+            "dedupe": false,
+            "mapping": {
+                "Year": "Year",
+                "Feature": "Feature",
+                "Feature Importance": "Feature Importance"
+            },
+            "renameLeft": {},
+            "renameRight": {},
+            "deselectLeft": [],
+            "deselectRight": [],
+            "fieldsFromLeft": [],
+            "fieldsFromRight": []
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "stack_i6ewrr",
+                "sourceOutlet": "out_0"
+            },
+            {
+                "id": "in_1",
+                "source": "edit_sdwgcw",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "summarize_jb03dq",
+                        "targetInlet": "in_0"
+                    },
+                    {
+                        "target": "join_pbzcjh",
+                        "targetInlet": "in_1"
+                    }
+                ]
+            }
+        ],
+        "description": "Combine data by matching field names, giving a warning for errors, including all matching fields, without setting a specific output order."
+    },
+    {
+        "id": "summarize_jb03dq",
+        "name": "Summarize",
+        "type": "summarize",
+        "config": {
+            "aggs": [
+                {
+                    "arg": {
+                        "expr": "",
+                        "type": "field",
+                        "error": "",
+                        "constantValue": "",
+                        "selectedField": "Feature Importance"
+                    },
+                    "calc": "SUM",
+                    "tgt_col": {
+                        "id": "total_feature_importance",
+                        "name": "Total Feature Importance",
+                        "dataType": "integer"
+                    }
+                }
+            ],
+            "sorts": [],
+            "window": [
+                null,
+                null
+            ],
+            "groupBy": [
+                "Year"
+            ],
+            "useWindow": false
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "stack_3chauv",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "join_pbzcjh",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": "Group data by the \"Year\" field and sum the \"Feature Importance\" field, renaming it to \"Total Feature Importance.\""
+    },
+    {
+        "id": "source_8fsod7",
+        "name": "CreateFeatureImportanceUpdated.csv",
+        "type": "source",
+        "config": {
+            "id": "nficqqfllj",
+            "name": "CreateFeatureImportanceUpdated.csv",
+            "type": "csv",
+            "owner": "cpowell@savantlabs.io",
+            "config": {
+                "type": "file",
+                "fileId": "dnudwifzav",
+                "tabName": "file",
+                "selected": [
+                    "feature",
+                    "feature_importance"
+                ],
+                "connector": "csv",
+                "overwrittenTypes": {}
+            },
+            "schema": [
+                {
+                    "id": "feature",
+                    "name": "Feature",
+                    "dataType": "string"
+                },
+                {
+                    "id": "feature_importance",
+                    "name": "Feature Importance",
+                    "dataType": "integer"
+                }
+            ],
+            "status": "Active",
+            "connector": "csv",
+            "createdBy": "cpowell@savantlabs.io",
+            "description": "Updated Version",
+            "modifiedTime": 1692048437451
+        },
+        "inlets": [],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "edit_7jtkkl",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": "Search the directory \"C:UsersGeorgeGodfreyOneDrive - Continuum ConsultingDocumentsTeamHackathon202220220807 - ProjectHack 16GeneralChallengesChallenge 4 - Healthy Mind\" without subdirectories, limiting output to a specific record and format 25, ignoring the first row, and starting import from line 1."
+    },
+    {
+        "id": "source_g1s3dc",
+        "name": "CreateFeatureImportanceUpdated.csv",
+        "type": "source",
+        "config": {
+            "id": "nficqqfllj",
+            "name": "CreateFeatureImportanceUpdated.csv",
+            "type": "csv",
+            "connector": "csv"
+        },
+        "inlets": [],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "edit_mtlel1",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": "Search the directory \"C:UsersGeorgeGodfreyOneDrive - Continuum ConsultingDocumentsTeamHackathon202220220807 - ProjectHack 16GeneralChallengesChallenge 4 - Healthy Mind\" without subdirectories, limiting output to a specific record and format 25, ignoring the first row, and starting import from line 1."
+    },
+    {
+        "id": "source_jirjt0",
+        "name": "CreateFeatureImportanceUpdated.csv",
+        "type": "source",
+        "config": {
+            "id": "nficqqfllj",
+            "name": "CreateFeatureImportanceUpdated.csv",
+            "type": "csv",
+            "connector": "csv"
+        },
+        "inlets": [],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "edit_ro1mdp",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": "Search the directory \"C:UsersGeorgeGodfreyOneDrive - Continuum ConsultingDocumentsTeamHackathon202220220807 - ProjectHack 16GeneralChallengesChallenge 4 - Healthy Mind\" without subdirectories, limiting output to a specific record and format 25, ignoring the first row, and starting import from line 1."
+    },
+    {
+        "id": "source_akdlrb",
+        "name": "CreateFeatureImportanceUpdated.csv",
+        "type": "source",
+        "config": {
+            "id": "nficqqfllj",
+            "name": "CreateFeatureImportanceUpdated.csv",
+            "type": "csv",
+            "connector": "csv"
+        },
+        "inlets": [],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "edit_c4e70k",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": "Search the directory \"C:UsersGeorgeGodfreyOneDrive - Continuum ConsultingDocumentsTeamHackathon202220220807 - ProjectHack 16GeneralChallengesChallenge 4 - Healthy Mind\" without subdirectories, limiting output to a specific record and format 25, ignoring the first row, and starting import from line 1."
+    },
+    {
+        "id": "source_nrjdl4",
+        "name": "CreateFeatureImportanceUpdated.csv",
+        "type": "source",
+        "config": {
+            "id": "nficqqfllj",
+            "name": "CreateFeatureImportanceUpdated.csv",
+            "type": "csv",
+            "connector": "csv"
+        },
+        "inlets": [],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "edit_sdwgcw",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": "Search the directory \"C:UsersGeorgeGodfreyOneDrive - Continuum ConsultingDocumentsTeamHackathon202220220807 - ProjectHack 16GeneralChallengesChallenge 4 - Healthy Mind\" without subdirectories, limiting output to a specific record and format 25, ignoring the first row, and starting import from line 1."
+    },
+    {
+        "id": "edit_7kdfv3",
+        "name": "Transform",
+        "type": "edit",
+        "config": {
+            "edits": [
+                {
+                    "mode": "expression",
+                    "action": "add_col",
+                    "lookup": {
+                        "left": {
+                            "type": "constant",
+                            "value": 1,
+                            "dataType": "integer"
+                        },
+                        "type": "arithmetic",
+                        "right": {
+                            "type": "field",
+                            "fieldId": "total_feature_importance",
+                            "dataType": "integer",
+                            "fieldName": "Total Feature Importance"
+                        },
+                        "dataType": "number",
+                        "operator": "div"
+                    },
+                    "tgtCol": {
+                        "id": "scaling_factor",
+                        "name": "Scaling Factor",
+                        "dataType": "number"
+                    },
+                    "pipeline": {
+                        "steps": [
+                            {
+                                "tgt_col": {
+                                    "id": "scaling_factor",
+                                    "name": "Scaling Factor",
+                                    "dataType": "number"
+                                },
+                                "src_cols": [
+                                    "Total Feature Importance"
+                                ],
+                                "transform": "arithmetic",
+                                "parameters": {
+                                    "lhs": 1,
+                                    "operator": "div"
+                                },
+                                "transient_cols": []
+                            }
+                        ]
+                    },
+                    "expression": "1/`Total Feature Importance`"
+                }
+            ],
+            "modify": {},
+            "hiddenFields": [],
+            "orderedFields": [
+                "Year",
+                "Total Feature Importance",
+                "Feature",
+                "Scaling Factor",
+                "Feature Importance"
+            ]
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "join_pbzcjh",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "edit_6wvjdu",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": "Calculate the \"Scaling Factor\" as the reciprocal of \"Total Feature Importance,\" and then multiply it by \"Feature Importance,\" both as double type with size 8."
+    },
+    {
+        "id": "join_pbzcjh",
+        "name": "Join",
+        "type": "join",
+        "config": {
+            "on": [
+                {
+                    "op": "eq",
+                    "lhs": "Year",
+                    "rhs": "Year",
+                    "lhsMetadata": {
+                        "id": "year",
+                        "name": "Year",
+                        "dataType": "string"
+                    },
+                    "rhsMetadata": {
+                        "id": "year",
+                        "name": "Year",
+                        "dataType": "string"
+                    }
+                }
+            ],
+            "joiner": "and",
+            "lTable": "rhs",
+            "joinType": "left"
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "summarize_jb03dq",
+                "sourceOutlet": "out_0"
+            },
+            {
+                "id": "in_1",
+                "source": "stack_3chauv",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "edit_7kdfv3",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": "Join two datasets on the \"Year\" field, not by record position, selecting specific fields from the left and right connections, while changing the order and excluding right \"Year.\""
+    },
+    {
+        "id": "edit_6wvjdu",
+        "name": "Transform",
+        "type": "edit",
+        "config": {
+            "edits": [
+                {
+                    "mode": "expression",
+                    "action": "replace",
+                    "lookup": {
+                        "left": {
+                            "type": "field",
+                            "fieldId": "feature_importance",
+                            "dataType": "integer",
+                            "fieldName": "Feature Importance"
+                        },
+                        "type": "arithmetic",
+                        "right": {
+                            "type": "field",
+                            "fieldId": "scaling_factor",
+                            "dataType": "number",
+                            "fieldName": "Scaling Factor"
+                        },
+                        "dataType": "number",
+                        "operator": "mul"
+                    },
+                    "tgtCol": {
+                        "id": "feature_importance_2",
+                        "name": "Feature Importance",
+                        "dataType": "number"
+                    },
+                    "pipeline": {
+                        "steps": [
+                            {
+                                "tgt_col": {
+                                    "id": "feature_importance_2",
+                                    "name": "Feature Importance",
+                                    "dataType": "number"
+                                },
+                                "src_cols": [
+                                    "Feature Importance",
+                                    "Scaling Factor"
+                                ],
+                                "transform": "arithmetic",
+                                "parameters": {
+                                    "operator": "mul"
+                                },
+                                "transient_cols": []
+                            }
+                        ]
+                    },
+                    "expression": "`Feature Importance`*`Scaling Factor`",
+                    "replaceTgt": "Feature Importance"
+                }
+            ],
+            "modify": {},
+            "hiddenFields": [
+                "Total Feature Importance",
+                "Scaling Factor"
+            ],
+            "orderedFields": [
+                "Year",
+                "Total Feature Importance",
+                "Scaling Factor",
+                "Feature",
+                "Feature Importance"
+            ]
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "edit_7kdfv3",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "edit_bxkhcb",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": "Deselect the fields \"Total Feature Importance\" and \"Scaling Factor,\" while selecting all unknown fields, without changing the order or using comma decimals."
+    },
+    {
+        "id": "edit_bxkhcb",
+        "name": "Transform",
+        "type": "edit",
+        "config": {
+            "edits": [
+                {
+                    "calc": {
+                        "arg": {
+                            "expr": null,
+                            "type": null,
+                            "error": null,
+                            "constantValue": null,
+                            "selectedField": null
+                        },
+                        "calc": "RANK",
+                        "sorts": [
+                            [
+                                "Feature Importance",
+                                "dsc"
+                            ]
+                        ],
+                        "params": {
+                            "dense": false,
+                            "percent": false,
+                            "delimeter": ""
+                        },
+                        "partitions": [
+                            "Year"
+                        ],
+                        "calculationError": ""
+                    },
+                    "mode": "builder",
+                    "action": "add_col",
+                    "tgtCol": {
+                        "id": "feature_importance_rank",
+                        "name": "Feature Importance Rank",
+                        "dataType": "integer"
+                    },
+                    "expression": ""
+                }
+            ],
+            "modify": {},
+            "hiddenFields": [],
+            "orderedFields": [
+                "Feature Importance Rank",
+                "Year",
+                "Feature",
+                "Feature Importance"
+            ]
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "edit_6wvjdu",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "edit_i77rha",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": "Deselect the fields \"Total Feature Importance\" and \"Scaling Factor,\" while selecting all unknown fields, without changing the order or using comma decimals."
+    },
+    {
+        "id": "destination_k4hinu",
+        "name": "FeatureImportanceDummyOutput",
+        "type": "destination",
+        "config": {
+            "id": "ckttckhwvl",
+            "mode": "create",
+            "name": "FeatureImportanceDummyOutput",
+            "type": "googlesheets",
+            "owner": "cpowell@savantlabs.io",
+            "status": "Active",
+            "connector": "googlesheets",
+            "createdBy": "cpowell@savantlabs.io",
+            "expiresAt": 1707668609917,
+            "namespace": "xjlqzyce",
+            "externalId": "106FNiRN5heI6XSN0LSVG4aMAoEir6JSEJZbrVt21Aqc",
+            "objectPath": {
+                "table": "Sheet1",
+                "schema": "FeatureImportanceDummyOutput",
+                "catalog": "CData"
+            },
+            "sortConfig": [
+                [
+                    "Year",
+                    "ASC"
+                ],
+                [
+                    "Feature Importance Rank",
+                    "DESC"
+                ]
+            ],
+            "description": "Testing Workflow",
+            "topLeftCell": "A1",
+            "externalName": "FeatureImportanceDummyOutput",
+            "modifiedTime": 1692116620438,
+            "newObjectName": "Sheet1",
+            "authentication": {
+                "scope": "openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/spreadsheets",
+                "authType": "oauth",
+                "externalId": "106FNiRN5heI6XSN0LSVG4aMAoEir6JSEJZbrVt21Aqc",
+                "externalName": "FeatureImportanceDummyOutput",
+                "refreshToken": "eyJrZXlJZCI6InByb2plY3RzLzc1NTE1NDQzNzA3NC9zZWNyZXRzL2Flcy1rZXktcHJvZC92ZXJzaW9ucy8xIiwiaXYiOiJnU0xkdFpqV09EWXFaSGpMcGVwb3RBPT0iLCJjaXBoZXJUZXh0IjoiTHplRTYwUFdMRDNHSzk0bk1sdlZBajB3d1RMQWRvTGwzNHF1WkV0cnFSOVFmSEpjVkR3WUN3dkJRdHB3b29pelR5UkVZVHFRVmNvYkFmSStuVnVXdXU3YUp2SkczVFVPMC9XeWJ6bm5qNXVYamI1UFNGZFRNVGVpUjBTNTU4Q2JkZCtkSWZ2N29VRkdEUEp3UnZpejhBPT0ifQ=="
+            },
+            "selectedFields": [
+                "recordid",
+                "year",
+                "feature",
+                "feature_importance",
+                "feature_importance_rank"
+            ],
+            "subsequentMode": "replace"
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "edit_i77rha",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": []
+    },
+    {
+        "id": "edit_i77rha",
+        "name": "Transform",
+        "type": "edit",
+        "config": {
+            "edits": [
+                {
+                    "calc": {
+                        "arg": {
+                            "expr": null,
+                            "type": null,
+                            "error": null,
+                            "constantValue": null,
+                            "selectedField": null
+                        },
+                        "calc": "ROW_NUM",
+                        "sorts": [],
+                        "params": {},
+                        "partitions": [],
+                        "calculationError": ""
+                    },
+                    "mode": "builder",
+                    "action": "add_col",
+                    "tgtCol": {
+                        "id": "recordid",
+                        "name": "RecordID",
+                        "dataType": "integer"
+                    },
+                    "expression": ""
+                }
+            ],
+            "modify": {},
+            "hiddenFields": [],
+            "orderedFields": [
+                "RecordID",
+                "Importance Rank",
+                "Year",
+                "Feature",
+                "Feature Importance",
+                "Adjusted Feature Importance"
+            ]
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "edit_bxkhcb",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "destination_k4hinu",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": ""
+    },
+    {
+        "id": "edit_7jtkkl",
+        "name": "Transform",
+        "type": "edit",
+        "config": {
+            "edits": [
+                {
+                    "mode": "expression",
+                    "action": "add_col",
+                    "lookup": {
+                        "type": "operation",
+                        "dataType": "string",
+                        "operator": "to_text",
+                        "arguments": [
+                            {
+                                "type": "constant",
+                                "value": 2017,
+                                "dataType": "integer"
+                            }
+                        ]
+                    },
+                    "tgtCol": {
+                        "id": "year",
+                        "name": "Year",
+                        "dataType": "string"
+                    },
+                    "pipeline": {
+                        "steps": [
+                            {
+                                "tgt_col": {
+                                    "id": "__transient_QH216z9T__",
+                                    "name": "__transient_QH216z9T__",
+                                    "dataType": "integer"
+                                },
+                                "src_cols": [],
+                                "transform": "constant",
+                                "parameters": {
+                                    "value": 2017
+                                }
+                            },
+                            {
+                                "tgt_col": {
+                                    "id": "year",
+                                    "name": "Year",
+                                    "dataType": "string"
+                                },
+                                "src_cols": [
+                                    "__transient_QH216z9T__"
+                                ],
+                                "transform": "to_text",
+                                "parameters": {},
+                                "transient_cols": [
+                                    "__transient_QH216z9T__"
+                                ]
+                            }
+                        ]
+                    },
+                    "expression": "TO_TEXT(2017)"
+                }
+            ],
+            "modify": {},
+            "hiddenFields": [],
+            "orderedFields": [
+                "Feature",
+                "Feature Importance",
+                "Year"
+            ]
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "source_8fsod7",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "stack_i9uev3",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": "Set the field \"Year\" to the value \"2017\" with a size of 1073741823 and a type of V_WString."
+    }
+]

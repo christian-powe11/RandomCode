@@ -1,0 +1,76 @@
+{
+    "mode": "expression",
+    "action": "add_col",
+    "lookup": {
+        "left": {
+            "left": {
+                "type": "field",
+                "fieldId": "revenue_ytd_actuals",
+                "dataType": "integer",
+                "fieldName": "Revenue YTD Actuals"
+            },
+            "type": "arithmetic",
+            "right": {
+                "type": "field",
+                "fieldId": "revenues_ytd_budget",
+                "dataType": "number",
+                "fieldName": "Revenues YTD Budget"
+            },
+            "dataType": "number",
+            "operator": "sub"
+        },
+        "type": "arithmetic",
+        "right": {
+            "type": "field",
+            "fieldId": "revenues_ytd_budget",
+            "dataType": "number",
+            "fieldName": "Revenues YTD Budget"
+        },
+        "dataType": "number",
+        "operator": "div"
+    },
+    "tgtCol": {
+        "id": "c___above_____below_budget",
+        "name": "% Above / % Below Budget",
+        "dataType": "number"
+    },
+    "pipeline": {
+        "steps": [
+            {
+                "tgt_col": {
+                    "id": "__transient_RIrgWn7V__",
+                    "name": "__transient_RIrgWn7V__",
+                    "dataType": "number"
+                },
+                "src_cols": [
+                    "Revenue YTD Actuals",
+                    "Revenues YTD Budget"
+                ],
+                "transform": "arithmetic",
+                "parameters": {
+                    "operator": "sub"
+                },
+                "transient_cols": []
+            },
+            {
+                "tgt_col": {
+                    "id": "c___above_____below_budget",
+                    "name": "% Above / % Below Budget",
+                    "dataType": "number"
+                },
+                "src_cols": [
+                    "__transient_RIrgWn7V__",
+                    "Revenues YTD Budget"
+                ],
+                "transform": "arithmetic",
+                "parameters": {
+                    "operator": "div"
+                },
+                "transient_cols": [
+                    "__transient_RIrgWn7V__"
+                ]
+            }
+        ]
+    },
+    "expression": "(`Revenue YTD Actuals` - `Revenues YTD Budget`)/`Revenues YTD Budget`"
+}

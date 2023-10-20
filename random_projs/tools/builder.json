@@ -1,0 +1,31 @@
+{
+    "calc": {
+        "arg": {
+            "expr": "",
+            "type": "field",
+            "error": "",
+            "constantValue": "",
+            "selectedField": "version"
+        },
+        "calc": "MAX",
+        "sorts": [],
+        "params": {},
+        "window": [
+            null,
+            null
+        ],
+        "useWindow": false,
+        "partitions": [
+            "recipe_id"
+        ],
+        "calculationError": ""
+    },
+    "mode": "builder",
+    "action": "add_col",
+    "tgtCol": {
+        "id": "max_version",
+        "name": "max version",
+        "dataType": "string"
+    },
+    "expression": ""
+}

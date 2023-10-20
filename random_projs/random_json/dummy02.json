@@ -1,0 +1,45 @@
+[
+    {
+        "cond": {
+            "left": {
+                "type": "field",
+                "fieldId": "field_type_for_calc",
+                "dataType": "string",
+                "fieldName": "Field Type for Calc"
+            },
+            "type": "binary",
+            "right": {
+                "type": "constant",
+                "value": "CloseDate",
+                "dataType": "string"
+            },
+            "dataType": "boolean",
+            "operator": "eq"
+        },
+        "result": {
+            "type": "operation",
+            "dataType": "integer",
+            "operator": "time_period_offset",
+            "arguments": [
+                {
+                    "type": "operation",
+                    "dataType": "date",
+                    "operator": "to_date",
+                    "arguments": [
+                        {
+                            "type": "field",
+                            "fieldId": "oldvalue",
+                            "dataType": "string",
+                            "fieldName": "OldValue"
+                        }
+                    ]
+                },
+                {
+                    "type": "constant",
+                    "value": "Quarter",
+                    "dataType": "string"
+                }
+            ]
+        }
+    }
+]

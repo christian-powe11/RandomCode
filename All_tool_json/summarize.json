@@ -1,0 +1,24 @@
+[
+    {
+        "id": "summarize_lmkucc",
+        "name": "Summarize",
+        "type": "summarize",
+        "inlets": [
+            {
+                "id": "in_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": []
+            }
+        ],
+        "position": {
+            "x": 0.0,
+            "y": 45.0
+        }
+    }
+]
+
+

@@ -1,0 +1,1 @@
+[{"id": "rollup_gexjzo", "name": "Time Series", "type": "rollup", "inlets": [{"id": "in_0"}], "outlets": [{"id": "out_0", "targets": []}], "position": {"x": 62.0, "y": 63.0}}]

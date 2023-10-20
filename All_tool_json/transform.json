@@ -1,0 +1,27 @@
+[
+    {
+        "id": "edit_fkhspb",
+        "name": "Transform",
+        "type": "edit",
+        "config": {
+            "edits": [],
+            "modify": {},
+            "hiddenFields": []
+        },
+        "inlets": [
+            {
+                "id": "in_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": []
+            }
+        ],
+        "position": {
+            "x": 34.0,
+            "y": 16.0
+        }
+    }
+]

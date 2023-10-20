@@ -1,0 +1,1158 @@
+[
+    {
+        "id": "edit_wipilm",
+        "name": "Year=2017",
+        "type": "edit",
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "source_8fsod7",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "stack_i9uev3",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": ""
+    },
+    {
+        "id": "edit_mtlel1",
+        "name": "Year=2018",
+        "type": "edit",
+        "config": {
+            "edits": [
+                {
+                    "mode": "expression",
+                    "action": "add_col",
+                    "lookup": {
+                        "type": "operation",
+                        "dataType": "string",
+                        "operator": "to_text",
+                        "arguments": [
+                            {
+                                "type": "constant",
+                                "value": 2018,
+                                "dataType": "integer"
+                            }
+                        ]
+                    },
+                    "tgtCol": {
+                        "id": "year",
+                        "name": "Year",
+                        "dataType": "string"
+                    },
+                    "pipeline": {
+                        "steps": [
+                            {
+                                "tgt_col": {
+                                    "id": "__transient_VSjk-usK__",
+                                    "name": "__transient_VSjk-usK__",
+                                    "dataType": "integer"
+                                },
+                                "src_cols": [],
+                                "transform": "constant",
+                                "parameters": {
+                                    "value": 2018
+                                }
+                            },
+                            {
+                                "tgt_col": {
+                                    "id": "year",
+                                    "name": "Year",
+                                    "dataType": "string"
+                                },
+                                "src_cols": [
+                                    "__transient_VSjk-usK__"
+                                ],
+                                "transform": "to_text",
+                                "parameters": {},
+                                "transient_cols": [
+                                    "__transient_VSjk-usK__"
+                                ]
+                            }
+                        ]
+                    },
+                    "expression": "TO_TEXT(2018)"
+                }
+            ],
+            "modify": {},
+            "hiddenFields": [],
+            "orderedFields": [
+                "Feature",
+                "Feature Importance",
+                "Year"
+            ]
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "source_g1s3dc",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "stack_i9uev3",
+                        "targetInlet": "in_1"
+                    }
+                ]
+            }
+        ],
+        "description": ""
+    },
+    {
+        "id": "edit_ro1mdp",
+        "name": "Year=2019",
+        "type": "edit",
+        "config": {
+            "edits": [
+                {
+                    "mode": "expression",
+                    "action": "add_col",
+                    "lookup": {
+                        "type": "operation",
+                        "dataType": "string",
+                        "operator": "to_text",
+                        "arguments": [
+                            {
+                                "type": "constant",
+                                "value": 2019,
+                                "dataType": "integer"
+                            }
+                        ]
+                    },
+                    "tgtCol": {
+                        "id": "year",
+                        "name": "Year",
+                        "dataType": "string"
+                    },
+                    "pipeline": {
+                        "steps": [
+                            {
+                                "tgt_col": {
+                                    "id": "__transient_DywYXoV6__",
+                                    "name": "__transient_DywYXoV6__",
+                                    "dataType": "integer"
+                                },
+                                "src_cols": [],
+                                "transform": "constant",
+                                "parameters": {
+                                    "value": 2019
+                                }
+                            },
+                            {
+                                "tgt_col": {
+                                    "id": "year",
+                                    "name": "Year",
+                                    "dataType": "string"
+                                },
+                                "src_cols": [
+                                    "__transient_DywYXoV6__"
+                                ],
+                                "transform": "to_text",
+                                "parameters": {},
+                                "transient_cols": [
+                                    "__transient_DywYXoV6__"
+                                ]
+                            }
+                        ]
+                    },
+                    "expression": "TO_TEXT(2019)"
+                }
+            ],
+            "modify": {},
+            "hiddenFields": [],
+            "orderedFields": [
+                "Feature",
+                "Feature Importance",
+                "Year"
+            ]
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "source_jirjt0",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "stack_zmovxk",
+                        "targetInlet": "in_1"
+                    }
+                ]
+            }
+        ],
+        "description": ""
+    },
+    {
+        "id": "edit_c4e70k",
+        "name": "Year=2020",
+        "type": "edit",
+        "config": {
+            "edits": [
+                {
+                    "mode": "expression",
+                    "action": "add_col",
+                    "lookup": {
+                        "type": "operation",
+                        "dataType": "string",
+                        "operator": "to_text",
+                        "arguments": [
+                            {
+                                "type": "constant",
+                                "value": 2020,
+                                "dataType": "integer"
+                            }
+                        ]
+                    },
+                    "tgtCol": {
+                        "id": "year",
+                        "name": "Year",
+                        "dataType": "string"
+                    },
+                    "pipeline": {
+                        "steps": [
+                            {
+                                "tgt_col": {
+                                    "id": "__transient_ozXajXpQ__",
+                                    "name": "__transient_ozXajXpQ__",
+                                    "dataType": "integer"
+                                },
+                                "src_cols": [],
+                                "transform": "constant",
+                                "parameters": {
+                                    "value": 2020
+                                }
+                            },
+                            {
+                                "tgt_col": {
+                                    "id": "year",
+                                    "name": "Year",
+                                    "dataType": "string"
+                                },
+                                "src_cols": [
+                                    "__transient_ozXajXpQ__"
+                                ],
+                                "transform": "to_text",
+                                "parameters": {},
+                                "transient_cols": [
+                                    "__transient_ozXajXpQ__"
+                                ]
+                            }
+                        ]
+                    },
+                    "expression": "TO_TEXT(2020)"
+                }
+            ],
+            "modify": {},
+            "hiddenFields": [],
+            "orderedFields": [
+                "Feature",
+                "Feature Importance",
+                "Year"
+            ]
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "source_akdlrb",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "stack_i6ewrr",
+                        "targetInlet": "in_1"
+                    }
+                ]
+            }
+        ],
+        "description": ""
+    },
+    {
+        "id": "edit_sdwgcw",
+        "name": "Year=2021",
+        "type": "edit",
+        "config": {
+            "edits": [
+                {
+                    "mode": "expression",
+                    "action": "add_col",
+                    "lookup": {
+                        "type": "operation",
+                        "dataType": "string",
+                        "operator": "to_text",
+                        "arguments": [
+                            {
+                                "type": "constant",
+                                "value": 2021,
+                                "dataType": "integer"
+                            }
+                        ]
+                    },
+                    "tgtCol": {
+                        "id": "year",
+                        "name": "Year",
+                        "dataType": "string"
+                    },
+                    "pipeline": {
+                        "steps": [
+                            {
+                                "tgt_col": {
+                                    "id": "__transient_sygLgiIv__",
+                                    "name": "__transient_sygLgiIv__",
+                                    "dataType": "integer"
+                                },
+                                "src_cols": [],
+                                "transform": "constant",
+                                "parameters": {
+                                    "value": 2021
+                                }
+                            },
+                            {
+                                "tgt_col": {
+                                    "id": "year",
+                                    "name": "Year",
+                                    "dataType": "string"
+                                },
+                                "src_cols": [
+                                    "__transient_sygLgiIv__"
+                                ],
+                                "transform": "to_text",
+                                "parameters": {},
+                                "transient_cols": [
+                                    "__transient_sygLgiIv__"
+                                ]
+                            }
+                        ]
+                    },
+                    "expression": "TO_TEXT(2021)"
+                }
+            ],
+            "modify": {},
+            "hiddenFields": [],
+            "orderedFields": [
+                "Feature",
+                "Feature Importance",
+                "Year"
+            ]
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "source_nrjdl4",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "stack_3chauv",
+                        "targetInlet": "in_1"
+                    }
+                ]
+            }
+        ],
+        "description": ""
+    },
+    {
+        "id": "stack_i9uev3",
+        "name": "Stack",
+        "type": "stack",
+        "config": {
+            "dedupe": false,
+            "mapping": {
+                "Year": "Year",
+                "Feature": "Feature",
+                "Feature Importance": "Feature Importance"
+            },
+            "renameLeft": {},
+            "renameRight": {},
+            "deselectLeft": [],
+            "deselectRight": [],
+            "fieldsFromLeft": [],
+            "fieldsFromRight": []
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "edit_wipilm",
+                "sourceOutlet": "out_0"
+            },
+            {
+                "id": "in_1",
+                "source": "edit_mtlel1",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "stack_zmovxk",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "stack_zmovxk",
+        "name": "Stack",
+        "type": "stack",
+        "config": {
+            "dedupe": false,
+            "mapping": {
+                "Year": "Year",
+                "Feature": "Feature",
+                "Feature Importance": "Feature Importance"
+            },
+            "renameLeft": {},
+            "renameRight": {},
+            "deselectLeft": [],
+            "deselectRight": [],
+            "fieldsFromLeft": [],
+            "fieldsFromRight": []
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "stack_i9uev3",
+                "sourceOutlet": "out_0"
+            },
+            {
+                "id": "in_1",
+                "source": "edit_ro1mdp",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "stack_i6ewrr",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "stack_i6ewrr",
+        "name": "Stack",
+        "type": "stack",
+        "config": {
+            "dedupe": false,
+            "mapping": {
+                "Year": "Year",
+                "Feature": "Feature",
+                "Feature Importance": "Feature Importance"
+            },
+            "renameLeft": {},
+            "renameRight": {},
+            "deselectLeft": [],
+            "deselectRight": [],
+            "fieldsFromLeft": [],
+            "fieldsFromRight": []
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "stack_zmovxk",
+                "sourceOutlet": "out_0"
+            },
+            {
+                "id": "in_1",
+                "source": "edit_c4e70k",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "stack_3chauv",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "stack_3chauv",
+        "name": "Stack",
+        "type": "stack",
+        "config": {
+            "dedupe": false,
+            "mapping": {
+                "Year": "Year",
+                "Feature": "Feature",
+                "Feature Importance": "Feature Importance"
+            },
+            "renameLeft": {},
+            "renameRight": {},
+            "deselectLeft": [],
+            "deselectRight": [],
+            "fieldsFromLeft": [],
+            "fieldsFromRight": []
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "stack_i6ewrr",
+                "sourceOutlet": "out_0"
+            },
+            {
+                "id": "in_1",
+                "source": "edit_sdwgcw",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "summarize_jb03dq",
+                        "targetInlet": "in_0"
+                    },
+                    {
+                        "target": "join_pbzcjh",
+                        "targetInlet": "in_1"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "summarize_jb03dq",
+        "name": "Summarize",
+        "type": "summarize",
+        "config": {
+            "aggs": [
+                {
+                    "arg": {
+                        "expr": "",
+                        "type": "field",
+                        "error": "",
+                        "constantValue": "",
+                        "selectedField": "Feature Importance"
+                    },
+                    "calc": "SUM",
+                    "tgt_col": {
+                        "id": "total_feature_importance",
+                        "name": "Total Feature Importance",
+                        "dataType": "integer"
+                    }
+                }
+            ],
+            "sorts": [],
+            "window": [
+                null,
+                null
+            ],
+            "groupBy": [
+                "Year"
+            ],
+            "useWindow": false
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "stack_3chauv",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "join_pbzcjh",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "source_8fsod7",
+        "name": "CreateFeatureImportanceUpdated.csv",
+        "type": "source",
+        "config": {
+            "id": "nficqqfllj",
+            "name": "CreateFeatureImportanceUpdated.csv",
+            "type": "csv",
+            "owner": "cpowell@savantlabs.io",
+            "config": {
+                "type": "file",
+                "fileId": "dnudwifzav",
+                "tabName": "file",
+                "selected": [
+                    "feature",
+                    "feature_importance"
+                ],
+                "connector": "csv",
+                "overwrittenTypes": {}
+            },
+            "schema": [
+                {
+                    "id": "feature",
+                    "name": "Feature",
+                    "dataType": "string"
+                },
+                {
+                    "id": "feature_importance",
+                    "name": "Feature Importance",
+                    "dataType": "integer"
+                }
+            ],
+            "status": "Active",
+            "connector": "csv",
+            "createdBy": "cpowell@savantlabs.io",
+            "description": "Updated Version",
+            "modifiedTime": 1692048437451
+        },
+        "inlets": [],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "edit_wipilm",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "source_g1s3dc",
+        "name": "CreateFeatureImportanceUpdated.csv",
+        "type": "source",
+        "config": {
+            "id": "nficqqfllj",
+            "name": "CreateFeatureImportanceUpdated.csv",
+            "type": "csv",
+            "connector": "csv"
+        },
+        "inlets": [],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "edit_mtlel1",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "source_jirjt0",
+        "name": "CreateFeatureImportanceUpdated.csv",
+        "type": "source",
+        "config": {
+            "id": "nficqqfllj",
+            "name": "CreateFeatureImportanceUpdated.csv",
+            "type": "csv",
+            "connector": "csv"
+        },
+        "inlets": [],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "edit_ro1mdp",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "source_akdlrb",
+        "name": "CreateFeatureImportanceUpdated.csv",
+        "type": "source",
+        "config": {
+            "id": "nficqqfllj",
+            "name": "CreateFeatureImportanceUpdated.csv",
+            "type": "csv",
+            "connector": "csv"
+        },
+        "inlets": [],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "edit_c4e70k",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "source_nrjdl4",
+        "name": "CreateFeatureImportanceUpdated.csv",
+        "type": "source",
+        "config": {
+            "id": "nficqqfllj",
+            "name": "CreateFeatureImportanceUpdated.csv",
+            "type": "csv",
+            "connector": "csv"
+        },
+        "inlets": [],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "edit_sdwgcw",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "edit_7kdfv3",
+        "name": "Create Scaling Factor",
+        "type": "edit",
+        "config": {
+            "edits": [
+                {
+                    "mode": "expression",
+                    "action": "add_col",
+                    "lookup": {
+                        "left": {
+                            "type": "constant",
+                            "value": 1,
+                            "dataType": "integer"
+                        },
+                        "type": "arithmetic",
+                        "right": {
+                            "type": "field",
+                            "fieldId": "total_feature_importance",
+                            "dataType": "integer",
+                            "fieldName": "Total Feature Importance"
+                        },
+                        "dataType": "number",
+                        "operator": "div"
+                    },
+                    "tgtCol": {
+                        "id": "scaling_factor",
+                        "name": "Scaling Factor",
+                        "dataType": "number"
+                    },
+                    "pipeline": {
+                        "steps": [
+                            {
+                                "tgt_col": {
+                                    "id": "scaling_factor",
+                                    "name": "Scaling Factor",
+                                    "dataType": "number"
+                                },
+                                "src_cols": [
+                                    "Total Feature Importance"
+                                ],
+                                "transform": "arithmetic",
+                                "parameters": {
+                                    "lhs": 1,
+                                    "operator": "div"
+                                },
+                                "transient_cols": []
+                            }
+                        ]
+                    },
+                    "expression": "1/`Total Feature Importance`"
+                },
+                {
+                    "mode": "expression",
+                    "action": "add_col",
+                    "lookup": {
+                        "left": {
+                            "type": "field",
+                            "fieldId": "scaling_factor",
+                            "dataType": "number",
+                            "fieldName": "Scaling Factor"
+                        },
+                        "type": "arithmetic",
+                        "right": {
+                            "type": "field",
+                            "fieldId": "feature_importance",
+                            "dataType": "integer",
+                            "fieldName": "Feature Importance"
+                        },
+                        "dataType": "number",
+                        "operator": "mul"
+                    },
+                    "tgtCol": {
+                        "id": "adjusted_feature_importance",
+                        "name": "Adjusted Feature Importance",
+                        "dataType": "number"
+                    },
+                    "pipeline": {
+                        "steps": [
+                            {
+                                "tgt_col": {
+                                    "id": "adjusted_feature_importance",
+                                    "name": "Adjusted Feature Importance",
+                                    "dataType": "number"
+                                },
+                                "src_cols": [
+                                    "Scaling Factor",
+                                    "Feature Importance"
+                                ],
+                                "transform": "arithmetic",
+                                "parameters": {
+                                    "operator": "mul"
+                                },
+                                "transient_cols": []
+                            }
+                        ]
+                    },
+                    "expression": "`Scaling Factor`*`Feature Importance`"
+                }
+            ],
+            "modify": {},
+            "hiddenFields": [],
+            "orderedFields": [
+                "Adjusted Feature Importance",
+                "Year",
+                "Total Feature Importance",
+                "Scaling Factor"
+            ]
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "join_pbzcjh",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "edit_6wvjdu",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": ""
+    },
+    {
+        "id": "join_pbzcjh",
+        "name": "Join",
+        "type": "join",
+        "config": {
+            "on": [
+                {
+                    "op": "eq",
+                    "lhs": "Year",
+                    "rhs": "Year",
+                    "lhsMetadata": {
+                        "id": "year",
+                        "name": "Year",
+                        "dataType": "string"
+                    },
+                    "rhsMetadata": {
+                        "id": "year",
+                        "name": "Year",
+                        "dataType": "string"
+                    }
+                }
+            ],
+            "joiner": "and",
+            "lTable": "rhs",
+            "joinType": "left"
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "summarize_jb03dq",
+                "sourceOutlet": "out_0"
+            },
+            {
+                "id": "in_1",
+                "source": "stack_3chauv",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "edit_7kdfv3",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "edit_6wvjdu",
+        "name": "Select Columns",
+        "type": "edit",
+        "config": {
+            "edits": [],
+            "modify": {},
+            "hiddenFields": [
+                "Scaling Factor",
+                "Total Feature Importance"
+            ],
+            "orderedFields": [
+                "Year",
+                "Total Feature Importance",
+                "Scaling Factor",
+                "Feature",
+                "Feature Importance",
+                "Adjusted Feature Importance"
+            ]
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "edit_7kdfv3",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "edit_bxkhcb",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": ""
+    },
+    {
+        "id": "edit_bxkhcb",
+        "name": "Rank",
+        "type": "edit",
+        "config": {
+            "edits": [
+                {
+                    "calc": {
+                        "arg": {
+                            "expr": null,
+                            "type": null,
+                            "error": null,
+                            "constantValue": null,
+                            "selectedField": null
+                        },
+                        "calc": "RANK",
+                        "sorts": [
+                            [
+                                "Adjusted Feature Importance",
+                                "dsc"
+                            ]
+                        ],
+                        "params": {
+                            "dense": false,
+                            "percent": false,
+                            "delimeter": ""
+                        },
+                        "partitions": [
+                            "Year"
+                        ],
+                        "calculationError": ""
+                    },
+                    "mode": "builder",
+                    "action": "add_col",
+                    "tgtCol": {
+                        "id": "feature_importance_rank",
+                        "name": "Feature Importance Rank",
+                        "dataType": "integer"
+                    },
+                    "expression": ""
+                }
+            ],
+            "modify": {},
+            "hiddenFields": [],
+            "orderedFields": [
+                "Feature Importance Rank",
+                "Year",
+                "Feature",
+                "Feature Importance",
+                "Adjusted Feature Importance"
+            ]
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "edit_6wvjdu",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "edit_i77rha",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": ""
+    },
+    {
+        "id": "destination_k4hinu",
+        "name": "FeatureImportanceDummyOutput",
+        "type": "destination",
+        "config": {
+            "id": "ckttckhwvl",
+            "mode": "create",
+            "name": "FeatureImportanceDummyOutput",
+            "type": "googlesheets",
+            "owner": "cpowell@savantlabs.io",
+            "status": "Active",
+            "connector": "googlesheets",
+            "createdBy": "cpowell@savantlabs.io",
+            "expiresAt": 1707668609917,
+            "namespace": "xjlqzyce",
+            "externalId": "106FNiRN5heI6XSN0LSVG4aMAoEir6JSEJZbrVt21Aqc",
+            "objectPath": {
+                "schema": "FeatureImportanceDummyOutput",
+                "catalog": "CData"
+            },
+            "sortConfig": [
+                [
+                    "Year",
+                    "ASC"
+                ],
+                [
+                    "Feature Importance Rank",
+                    "DESC"
+                ]
+            ],
+            "description": "Testing Workflow",
+            "topLeftCell": "A1",
+            "externalName": "FeatureImportanceDummyOutput",
+            "modifiedTime": 1692116620438,
+            "newObjectName": "Sheet1",
+            "authentication": {
+                "scope": "openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/spreadsheets",
+                "authType": "oauth",
+                "externalId": "106FNiRN5heI6XSN0LSVG4aMAoEir6JSEJZbrVt21Aqc",
+                "externalName": "FeatureImportanceDummyOutput",
+                "refreshToken": "eyJrZXlJZCI6InByb2plY3RzLzc1NTE1NDQzNzA3NC9zZWNyZXRzL2Flcy1rZXktcHJvZC92ZXJzaW9ucy8xIiwiaXYiOiJnU0xkdFpqV09EWXFaSGpMcGVwb3RBPT0iLCJjaXBoZXJUZXh0IjoiTHplRTYwUFdMRDNHSzk0bk1sdlZBajB3d1RMQWRvTGwzNHF1WkV0cnFSOVFmSEpjVkR3WUN3dkJRdHB3b29pelR5UkVZVHFRVmNvYkFmSStuVnVXdXU3YUp2SkczVFVPMC9XeWJ6bm5qNXVYamI1UFNGZFRNVGVpUjBTNTU4Q2JkZCtkSWZ2N29VRkdEUEp3UnZpejhBPT0ifQ=="
+            },
+            "selectedFields": [
+                "recordid",
+                "year",
+                "feature",
+                "feature_importance",
+                "adjusted_feature_importance",
+                "feature_importance_rank"
+            ],
+            "subsequentMode": "replace"
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "edit_i77rha",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": []
+    },
+    {
+        "id": "edit_i77rha",
+        "name": "Record ID",
+        "type": "edit",
+        "config": {
+            "edits": [
+                {
+                    "calc": {
+                        "arg": {
+                            "expr": null,
+                            "type": null,
+                            "error": null,
+                            "constantValue": null,
+                            "selectedField": null
+                        },
+                        "calc": "ROW_NUM",
+                        "sorts": [],
+                        "params": {},
+                        "partitions": [],
+                        "calculationError": ""
+                    },
+                    "mode": "builder",
+                    "action": "add_col",
+                    "tgtCol": {
+                        "id": "recordid",
+                        "name": "RecordID",
+                        "dataType": "integer"
+                    },
+                    "expression": ""
+                }
+            ],
+            "modify": {},
+            "hiddenFields": [],
+            "orderedFields": [
+                "RecordID",
+                "Importance Rank",
+                "Year",
+                "Feature",
+                "Feature Importance",
+                "Adjusted Feature Importance"
+            ]
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "edit_bxkhcb",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "destination_k4hinu",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "description": ""
+    }
+]

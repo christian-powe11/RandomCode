@@ -1,0 +1,72 @@
+{
+    "id": "edit_wqsxmv",
+    "name": "Edit",
+    "type": "edit",
+    "config": {
+        "edits": [],
+        "renames": {
+            "id": "user_id",
+            "eventType": "event_type",
+            "published": "published_date",
+            "alternateId": "email_id",
+            "displayMessage": "display_message"
+        },
+        "hiddenFields": [
+            "device",
+            "authenticationContext",
+            "outcome",
+            "securityContext",
+            "severity",
+            "debugContext",
+            "legacyEventType",
+            "transaction",
+            "uuid",
+            "version",
+            "request",
+            "target",
+            "detailEntry",
+            "displayName"
+        ],
+        "orderedFields": [
+            "user_id",
+            "email_id",
+            "type",
+            "event_type",
+            "display_message",
+            "published_date",
+            "client",
+            "device",
+            "authenticationContext",
+            "outcome",
+            "securityContext",
+            "severity",
+            "debugContext",
+            "legacyEventType",
+            "transaction",
+            "uuid",
+            "version",
+            "request",
+            "target",
+            "detailEntry",
+            "displayName"
+        ]
+    },
+    "inlets": [
+        {
+            "id": "in_0",
+            "source": "json_7wymtk",
+            "sourceOutlet": "out_0"
+        }
+    ],
+    "outlets": [
+        {
+            "id": "out_0",
+            "targets": [
+                {
+                    "target": "json_5m56b9",
+                    "targetInlet": "in_0"
+                }
+            ]
+        }
+    ]
+}

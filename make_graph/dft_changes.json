@@ -1,0 +1,190 @@
+[
+    {
+        "id": "source_0kyis0",
+        "name": "dummy_data_json_migration.csv",
+        "type": "source",
+        "config": {
+            "id": "mxtqykccia",
+            "name": "dummy_data_json_migration.csv",
+            "type": "csv",
+            "connector": "csv"
+        },
+        "inlets": [],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "filter_znktfe",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "position": {
+            "x": 0,
+            "y": 0
+        }
+    },
+    {
+        "id": "filter_znktfe",
+        "name": "Filter",
+        "type": "filter",
+        "config": {
+            "mode": "wizard",
+            "rules": [],
+            "dedupe": false,
+            "filter": [
+                {
+                    "id": "gender",
+                    "name": "gender",
+                    "value": "male",
+                    "dataType": "string",
+                    "conditionalOperator": "="
+                }
+            ],
+            "joiner": "and",
+            "pipeline": {
+                "steps": [
+                    {
+                        "tgt_col": {
+                            "id": "col_FwMc2luH",
+                            "name": "Column KzidjxxY",
+                            "dataType": "boolean"
+                        },
+                        "src_cols": [
+                            "gender"
+                        ],
+                        "transform": "binary",
+                        "parameters": {
+                            "rhs": "male",
+                            "operator": "eq"
+                        },
+                        "transient_cols": []
+                    }
+                ]
+            },
+            "dataFilterExpr": "`gender` = \"male\"",
+            "dataFilterLookUp": {
+                "left": {
+                    "type": "field",
+                    "fieldId": "gender",
+                    "dataType": "string",
+                    "fieldName": "gender"
+                },
+                "type": "binary",
+                "right": {
+                    "type": "constant",
+                    "value": "male",
+                    "dataType": "string"
+                },
+                "dataType": "boolean",
+                "operator": "eq"
+            }
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "source_0kyis0",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": [
+                    {
+                        "target": "edit_xcgumh",
+                        "targetInlet": "in_0"
+                    }
+                ]
+            }
+        ],
+        "position": {
+            "x": 1,
+            "y": 1
+        }
+    },
+    {
+        "id": "edit_xcgumh",
+        "name": "Transform",
+        "type": "edit",
+        "config": {
+            "edits": [
+                {
+                    "mode": "expression",
+                    "action": "add_col",
+                    "lookup": {
+                        "type": "operation",
+                        "dataType": "string",
+                        "operator": "split_part",
+                        "arguments": [
+                            {
+                                "type": "field",
+                                "fieldId": "ip_address",
+                                "dataType": "string",
+                                "fieldName": "ip_address"
+                            },
+                            {
+                                "type": "constant",
+                                "value": ".",
+                                "dataType": "string"
+                            },
+                            {
+                                "type": "constant",
+                                "value": 1,
+                                "dataType": "integer"
+                            }
+                        ]
+                    },
+                    "tgtCol": {
+                        "id": "first_ip",
+                        "name": "First_IP",
+                        "dataType": "string"
+                    },
+                    "pipeline": {
+                        "steps": [
+                            {
+                                "tgt_col": {
+                                    "id": "first_ip",
+                                    "name": "First_IP",
+                                    "dataType": "string"
+                                },
+                                "src_cols": [
+                                    "ip_address"
+                                ],
+                                "transform": "split_part",
+                                "parameters": {
+                                    "part": 1,
+                                    "delimeter": "."
+                                },
+                                "transient_cols": []
+                            }
+                        ]
+                    },
+                    "expression": "##GIBBERISH HERE"
+                }
+            ],
+            "modify": {},
+            "hiddenFields": [],
+            "orderedFields": []
+        },
+        "inlets": [
+            {
+                "id": "in_0",
+                "source": "filter_znktfe",
+                "sourceOutlet": "out_0"
+            }
+        ],
+        "outlets": [
+            {
+                "id": "out_0",
+                "targets": []
+            }
+        ],
+        "position": {
+            "x": 2,
+            "y": 2
+        }
+    }
+]
